@@ -1,0 +1,2 @@
+pod 'PaymentKit'
+pod 'SupportKit'
