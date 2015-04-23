@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LBUserInfoViewController.h
 //  Lobby-Boy
 //
 //  Created by Mike on 2015-04-23.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LBUserInfoViewController : UIViewController
 
 @end
-
