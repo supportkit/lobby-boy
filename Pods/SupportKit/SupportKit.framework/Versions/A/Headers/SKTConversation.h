@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SKTMessage.h"
+#import "SKTMessageBuyInfo.h"
 @protocol SKTConversationDelegate;
 
 /**
@@ -195,5 +196,8 @@ extern NSString* const SKTConversationNewMessagesKey;
  *  @see SKTMessage
  */
 -(void)conversation:(SKTConversation*)conversation didReceiveMessages:(NSArray*)messages;
+
+-(void)conversation:(SKTConversation *)conversation didSelectBuyWithInfo:(SKTMessageBuyInfo*)buyInfo;
+-(void)conversation:(SKTConversation *)conversation didSelectMoreInfo:(SKTMessageBuyInfo*)buyInfo;
 
 @end
