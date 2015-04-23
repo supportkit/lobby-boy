@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "OnboardingViewController.h"
+#import "OnboardingContentViewController.h"
+#import <SupportKit/SupportKit.h>
+#import "LBUserInfoViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +21,46 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    SKTSettings* sksettings = [SKTSettings settingsWithAppToken:@"444t1zbnnf8wrj4a5ts8keilx"];
+    sksettings.enableAppWideGesture = NO;
+    sksettings.enableGestureHintOnFirstLaunch = NO;
+    
+    [SupportKit initWithSettings:sksettings];
+    
+    //Show the onboarding controller if setup is not complete
+    NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
+    if(![def boolForKey:@"setupComplete"]) {
+        OnboardingContentViewController* firstPage = [OnboardingContentViewController contentWithTitle:@"Nice to meet you!"
+                                                                                                  body:@"Get whatever you want, anytime, with no hassle"
+                                                                                                 image:[UIImage imageNamed:@"lobbyboy.jpg"] buttonText:nil action:nil];
+        OnboardingContentViewController* secondPage = [OnboardingContentViewController contentWithTitle:@"How does it work?"
+                                                                                                   body:@"Text Lobby Boy anything you need, he'll handle it."
+                                                                                                  image:[UIImage imageNamed:@"lobbyboy.jpg"] buttonText:nil action:nil];
+        
+        OnboardingContentViewController* thirdPage = [OnboardingContentViewController contentWithTitle:@"Introduce yourself"
+                                                                                                   body:@"Tell us who you are and preload your credit card for fast checkout"
+                                                                                                  image:[UIImage imageNamed:@"lobbyboy.jpg"] buttonText:@"Get Started" action:^{
+                                                                                                      [self showUserInfo];
+                                                                                                  }];
+        
+        OnboardingViewController *onboardingVC = [OnboardingViewController onboardWithBackgroundImage:[UIImage imageNamed:@"salmon.png"] contents:@[firstPage, secondPage, thirdPage]];
+        
+        onboardingVC.shouldFadeTransitions = YES;
+        self.window.rootViewController = onboardingVC;
+    }
+    
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+-(void)showUserInfo {
+    [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        self.window.rootViewController = [[LBUserInfoViewController alloc] initWithNibName:@"LBUserInfoViewController" bundle:nil];
+    } completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

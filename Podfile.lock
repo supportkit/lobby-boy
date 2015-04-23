@@ -1,0 +1,13 @@
+PODS:
+  - PaymentKit (1.1.1)
+  - SupportKit (2.7.0)
+
+DEPENDENCIES:
+  - PaymentKit
+  - SupportKit
+
+SPEC CHECKSUMS:
+  PaymentKit: 323c25233af5060880daa0c31366d4b688c34487
+  SupportKit: 1d64673513572081594cc8405001924299c4b387
+
+COCOAPODS: 0.35.0

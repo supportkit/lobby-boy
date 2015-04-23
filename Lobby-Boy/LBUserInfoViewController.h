@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PaymentKit/PTKView.h>
 
 @interface LBUserInfoViewController : UIViewController
 
+@property(nonatomic, strong) PTKView* paymentView;
+
+@property(nonatomic, strong) IBOutlet UIView* paymentViewContainer;
+@property(nonatomic, strong) IBOutlet UITextField* firstNameField;
+@property(nonatomic, strong) IBOutlet UITextField* lastNameField;
+@property(nonatomic, strong) IBOutlet UITextField* emailField;
+
+-(IBAction)buttonTapped:(id)sender;
 @end

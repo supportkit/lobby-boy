@@ -71,7 +71,7 @@ static NSString * const kSkipButtonText = @"Skip";
     self.viewControllers = contents;
     
     // set the default properties
-    self.shouldMaskBackground = YES;
+    self.shouldMaskBackground = NO;
     self.shouldBlurBackground = NO;
     self.shouldFadeTransitions = NO;
     self.fadePageControlOnLastPage = NO;

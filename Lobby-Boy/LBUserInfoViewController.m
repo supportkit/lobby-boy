@@ -7,6 +7,7 @@
 //
 
 #import "LBUserInfoViewController.h"
+#import <SupportKit/SupportKit.h>
 
 @interface LBUserInfoViewController ()
 
@@ -33,5 +34,22 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction)buttonTapped:(id)sender {
+    if(!self.firstNameField.hidden) {
+        [SKTUser currentUser].firstName = self.firstNameField.text;
+        [SKTUser currentUser].lastName = self.lastNameField.text;
+        [SKTUser currentUser].email = self.emailField.text;
+        
+        self.firstNameField.hidden = YES;
+        self.lastNameField.hidden = YES;
+        self.emailField.hidden = YES;
+        
+        self.paymentView = [[PTKView alloc] initWithFrame:CGRectMake(15, self.firstNameField.frame.origin.y, 290, 55)];
+        [self.view addSubview:self.paymentView];
+    } else {
+        
+    }
+}
 
 @end

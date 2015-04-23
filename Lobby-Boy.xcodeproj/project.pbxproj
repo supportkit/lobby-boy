@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72865DC11A6E56110BA11C52 /* libPods.a */; };
 		F50AB5851AE9415A00C3DB23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5841AE9415A00C3DB23 /* main.m */; };
 		F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5871AE9415A00C3DB23 /* AppDelegate.m */; };
-		F50AB58B1AE9415A00C3DB23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB58A1AE9415A00C3DB23 /* ViewController.m */; };
-		F50AB58E1AE9415A00C3DB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50AB58C1AE9415A00C3DB23 /* Main.storyboard */; };
 		F50AB5901AE9415A00C3DB23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50AB58F1AE9415A00C3DB23 /* Images.xcassets */; };
-		F50AB5931AE9415A00C3DB23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F50AB5911AE9415A00C3DB23 /* LaunchScreen.xib */; };
 		F50AB59F1AE9415A00C3DB23 /* Lobby_BoyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB59E1AE9415A00C3DB23 /* Lobby_BoyTests.m */; };
+		F52557691AE94E92009D887D /* LBUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52557671AE94E92009D887D /* LBUserInfoViewController.m */; };
+		F525576A1AE94E92009D887D /* LBUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52557681AE94E92009D887D /* LBUserInfoViewController.xib */; };
+		F58D93831AE941F00079E843 /* lobbyboy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F58D93821AE941F00079E843 /* lobbyboy.jpg */; };
+		F58D93851AE944A90079E843 /* shark.png in Resources */ = {isa = PBXBuildFile; fileRef = F58D93841AE944A90079E843 /* shark.png */; };
+		F58D93921AE9451A0079E843 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D938F1AE9451A0079E843 /* OnboardingContentViewController.m */; };
+		F58D93931AE9451A0079E843 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D93911AE9451A0079E843 /* OnboardingViewController.m */; };
+		F58D93951AE949040079E843 /* bellboy_dribbble.png in Resources */ = {isa = PBXBuildFile; fileRef = F58D93941AE949040079E843 /* bellboy_dribbble.png */; };
+		F58D93971AE94A840079E843 /* salmon.png in Resources */ = {isa = PBXBuildFile; fileRef = F58D93961AE94A840079E843 /* salmon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +33,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		261E6C0168F9C063DE3A2E79 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		72865DC11A6E56110BA11C52 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B715EEF2381B7720365C4CB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F50AB57F1AE9415900C3DB23 /* Lobby-Boy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lobby-Boy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50AB5831AE9415A00C3DB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50AB5841AE9415A00C3DB23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F50AB5861AE9415A00C3DB23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F50AB5871AE9415A00C3DB23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F50AB5891AE9415A00C3DB23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F50AB58A1AE9415A00C3DB23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F50AB58D1AE9415A00C3DB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50AB58F1AE9415A00C3DB23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F50AB5921AE9415A00C3DB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F50AB5981AE9415A00C3DB23 /* Lobby-BoyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lobby-BoyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50AB59D1AE9415A00C3DB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50AB59E1AE9415A00C3DB23 /* Lobby_BoyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lobby_BoyTests.m; sourceTree = "<group>"; };
+		F52557661AE94E92009D887D /* LBUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBUserInfoViewController.h; sourceTree = "<group>"; };
+		F52557671AE94E92009D887D /* LBUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBUserInfoViewController.m; sourceTree = "<group>"; };
+		F52557681AE94E92009D887D /* LBUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBUserInfoViewController.xib; sourceTree = "<group>"; };
+		F58D93821AE941F00079E843 /* lobbyboy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lobbyboy.jpg; sourceTree = "<group>"; };
+		F58D93841AE944A90079E843 /* shark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shark.png; sourceTree = "<group>"; };
+		F58D938E1AE9451A0079E843 /* OnboardingContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingContentViewController.h; sourceTree = "<group>"; };
+		F58D938F1AE9451A0079E843 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
+		F58D93901AE9451A0079E843 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
+		F58D93911AE9451A0079E843 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
+		F58D93941AE949040079E843 /* bellboy_dribbble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bellboy_dribbble.png; sourceTree = "<group>"; };
+		F58D93961AE94A840079E843 /* salmon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salmon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +77,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34E743C0C7B42B7C8AC63817 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72865DC11A6E56110BA11C52 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7FA1DF344BC8B1CACE1AEB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				261E6C0168F9C063DE3A2E79 /* Pods.debug.xcconfig */,
+				B715EEF2381B7720365C4CB5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F50AB5761AE9415900C3DB23 = {
 			isa = PBXGroup;
 			children = (
 				F50AB5811AE9415900C3DB23 /* Lobby-Boy */,
 				F50AB59B1AE9415A00C3DB23 /* Lobby-BoyTests */,
 				F50AB5801AE9415900C3DB23 /* Products */,
+				E7FA1DF344BC8B1CACE1AEB0 /* Pods */,
+				34E743C0C7B42B7C8AC63817 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +117,15 @@
 		F50AB5811AE9415900C3DB23 /* Lobby-Boy */ = {
 			isa = PBXGroup;
 			children = (
+				F58D938D1AE9451A0079E843 /* ThirdParty */,
+				F58D93811AE941F00079E843 /* Resources */,
 				F50AB5861AE9415A00C3DB23 /* AppDelegate.h */,
 				F50AB5871AE9415A00C3DB23 /* AppDelegate.m */,
-				F50AB5891AE9415A00C3DB23 /* ViewController.h */,
-				F50AB58A1AE9415A00C3DB23 /* ViewController.m */,
-				F50AB58C1AE9415A00C3DB23 /* Main.storyboard */,
 				F50AB58F1AE9415A00C3DB23 /* Images.xcassets */,
-				F50AB5911AE9415A00C3DB23 /* LaunchScreen.xib */,
 				F50AB5821AE9415A00C3DB23 /* Supporting Files */,
+				F52557661AE94E92009D887D /* LBUserInfoViewController.h */,
+				F52557671AE94E92009D887D /* LBUserInfoViewController.m */,
+				F52557681AE94E92009D887D /* LBUserInfoViewController.xib */,
 			);
 			path = "Lobby-Boy";
 			sourceTree = "<group>";
@@ -119,6 +156,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F58D93811AE941F00079E843 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F58D93821AE941F00079E843 /* lobbyboy.jpg */,
+				F58D93961AE94A840079E843 /* salmon.png */,
+				F58D93941AE949040079E843 /* bellboy_dribbble.png */,
+				F58D93841AE944A90079E843 /* shark.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F58D938D1AE9451A0079E843 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				F58D938E1AE9451A0079E843 /* OnboardingContentViewController.h */,
+				F58D938F1AE9451A0079E843 /* OnboardingContentViewController.m */,
+				F58D93901AE9451A0079E843 /* OnboardingViewController.h */,
+				F58D93911AE9451A0079E843 /* OnboardingViewController.m */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F50AB5A21AE9415A00C3DB23 /* Build configuration list for PBXNativeTarget "Lobby-Boy" */;
 			buildPhases = (
+				4C20194794A9DF1B5434180F /* Check Pods Manifest.lock */,
 				F50AB57B1AE9415900C3DB23 /* Sources */,
 				F50AB57C1AE9415900C3DB23 /* Frameworks */,
 				F50AB57D1AE9415900C3DB23 /* Resources */,
+				DD123DD9622D5460C81D4499 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +260,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50AB58E1AE9415A00C3DB23 /* Main.storyboard in Resources */,
-				F50AB5931AE9415A00C3DB23 /* LaunchScreen.xib in Resources */,
+				F58D93851AE944A90079E843 /* shark.png in Resources */,
+				F58D93951AE949040079E843 /* bellboy_dribbble.png in Resources */,
+				F58D93831AE941F00079E843 /* lobbyboy.jpg in Resources */,
 				F50AB5901AE9415A00C3DB23 /* Images.xcassets in Resources */,
+				F58D93971AE94A840079E843 /* salmon.png in Resources */,
+				F525576A1AE94E92009D887D /* LBUserInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +278,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C20194794A9DF1B5434180F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DD123DD9622D5460C81D4499 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F50AB57B1AE9415900C3DB23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50AB58B1AE9415A00C3DB23 /* ViewController.m in Sources */,
 				F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */,
+				F52557691AE94E92009D887D /* LBUserInfoViewController.m in Sources */,
 				F50AB5851AE9415A00C3DB23 /* main.m in Sources */,
+				F58D93931AE9451A0079E843 /* OnboardingViewController.m in Sources */,
+				F58D93921AE9451A0079E843 /* OnboardingContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,25 +341,6 @@
 			targetProxy = F50AB5991AE9415A00C3DB23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F50AB58C1AE9415A00C3DB23 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F50AB58D1AE9415A00C3DB23 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F50AB5911AE9415A00C3DB23 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F50AB5921AE9415A00C3DB23 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F50AB5A01AE9415A00C3DB23 /* Debug */ = {
@@ -345,6 +425,7 @@
 		};
 		F50AB5A31AE9415A00C3DB23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 261E6C0168F9C063DE3A2E79 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Lobby-Boy/Info.plist";
@@ -355,6 +436,7 @@
 		};
 		F50AB5A41AE9415A00C3DB23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B715EEF2381B7720365C4CB5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Lobby-Boy/Info.plist";
@@ -416,6 +498,7 @@
 				F50AB5A41AE9415A00C3DB23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F50AB5A51AE9415A00C3DB23 /* Build configuration list for PBXNativeTarget "Lobby-BoyTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +507,7 @@
 				F50AB5A71AE9415A00C3DB23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
