@@ -14,6 +14,8 @@
 @interface LBProductLabelTableRowController : NSObject
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *label;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *price;
+
 
 
 @end

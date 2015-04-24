@@ -15,27 +15,42 @@
                                 <tableRow identifier="product-image" id="j6N-QP-5Ky" customClass="LBProductImageTableRowController">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="OLx-jh-mTl">
                                         <items>
-                                            <imageView alignment="center" image="lobbyboy.jpg" id="Yj4-RQ-Kcz"/>
+                                            <imageView width="1" alignment="center" image="lobbyboy.jpg" id="Yj4-RQ-Kcz"/>
                                         </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
                                         <outlet property="image" destination="Yj4-RQ-Kcz" id="xGn-PE-nCf"/>
                                     </connections>
                                 </tableRow>
                                 <tableRow identifier="product-label" id="xb0-51-Y1T" customClass="LBProductLabelTableRowController">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="Won-x8-gli">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="Won-x8-gli">
                                         <items>
-                                            <label alignment="center" text="Label" numberOfLines="0" id="p7G-p1-7WC"/>
+                                            <label alignment="center" text="Label" textAlignment="center" numberOfLines="0" id="p7G-p1-7WC">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                            <label width="1" alignment="left" text="$199.00" textAlignment="center" id="Ru7-7S-CKa">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
                                         <outlet property="label" destination="p7G-p1-7WC" id="OQw-sh-ux8"/>
+                                        <outlet property="price" destination="Ru7-7S-CKa" id="hBZ-DD-koj"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
+                        <button width="1" alignment="left" title="Buy" id="Jfm-ra-t0c">
+                            <color key="backgroundColor" red="0.57412749528884888" green="0.15489032864570618" blue="0.55934768915176392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                            <connections>
+                                <action selector="buyButtonAction" destination="AgC-eL-Hgc" id="dFe-Jq-uJK"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="buyButton" destination="Jfm-ra-t0c" id="k8q-fW-cng"/>
                         <outlet property="table" destination="sRu-Vj-oAq" id="rfq-WT-6GG"/>
                     </connections>
                 </controller>
@@ -47,9 +62,11 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="You should buy this dress!" numberOfLines="2" id="IdU-wH-bcW"/>
+                        <label alignment="left" text="Found something for you" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
+                        <color key="sashColor" red="0.57412749528884888" green="0.15489032864570618" blue="0.55934768915176392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </notificationCategory>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                         <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
