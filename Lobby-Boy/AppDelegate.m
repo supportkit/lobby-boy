@@ -15,7 +15,7 @@
 #import "Stripe.h"
 
 NSString * const kStripePublishableKey = @"pk_test_XMVpxPrQVvXdN8x98LKZ1m8y";
-NSString * const kSupportKitAppToken = @"4u59574vijr8b5kerej0fy6z0";
+NSString * const kSupportKitAppToken = @"7l7ldpc0cyir8jgqw7eimped4";
 NSString * const kSetupCompleteKey = @"setupComplete";
 NSString * const kPaymentServerBaseUrl = @"https://lobbyboy.herokuapp.com";
 NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
