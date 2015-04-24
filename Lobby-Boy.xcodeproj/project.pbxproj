@@ -31,6 +31,9 @@
 		9FDF25641AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
 		9FDF25651AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
 		9FDF25661AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
+		9FEF55E91AEAD8C100C08BBF /* LBStripeCharger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */; };
+		9FEF55EA1AEAD8C100C08BBF /* LBStripeCharger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */; };
+		9FEF55EB1AEAD8C100C08BBF /* LBStripeCharger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */; };
 		C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72865DC11A6E56110BA11C52 /* libPods.a */; };
 		F50AB5851AE9415A00C3DB23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5841AE9415A00C3DB23 /* main.m */; };
 		F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5871AE9415A00C3DB23 /* AppDelegate.m */; };
@@ -113,6 +116,8 @@
 		9F301BB11AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKInterfaceImage+ParentLoad.m"; sourceTree = "<group>"; };
 		9FDF25621AE9A83E00F2748E /* LBProductLabelTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBProductLabelTableRowController.h; sourceTree = "<group>"; };
 		9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBProductLabelTableRowController.m; sourceTree = "<group>"; };
+		9FEF55E71AEAD8C000C08BBF /* LBStripeCharger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBStripeCharger.h; sourceTree = "<group>"; };
+		9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBStripeCharger.m; sourceTree = "<group>"; };
 		B715EEF2381B7720365C4CB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F50AB57F1AE9415900C3DB23 /* Lobby-Boy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lobby-Boy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50AB5831AE9415A00C3DB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -283,6 +288,8 @@
 				F5A36F451AE9858200A9F06C /* LBRootViewController.h */,
 				F5A36F461AE9858200A9F06C /* LBRootViewController.m */,
 				F5A36F471AE9858200A9F06C /* LBRootViewController.xib */,
+				9FEF55E71AEAD8C000C08BBF /* LBStripeCharger.h */,
+				9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */,
 			);
 			path = "Lobby-Boy";
 			sourceTree = "<group>";
@@ -543,6 +550,7 @@
 				9F301BAF1AE98EC700324DA4 /* LBProductImageTableRowController.m in Sources */,
 				9F301B531AE9707300324DA4 /* NotificationController.m in Sources */,
 				9FDF25661AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */,
+				9FEF55EB1AEAD8C100C08BBF /* LBStripeCharger.m in Sources */,
 				9F301B501AE9707300324DA4 /* InterfaceController.m in Sources */,
 				9F301BB41AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */,
 			);
@@ -557,6 +565,7 @@
 				F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */,
 				9F301BB21AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */,
 				F52557691AE94E92009D887D /* LBUserInfoViewController.m in Sources */,
+				9FEF55E91AEAD8C100C08BBF /* LBStripeCharger.m in Sources */,
 				F50AB5851AE9415A00C3DB23 /* main.m in Sources */,
 				9F301BAD1AE98EC700324DA4 /* LBProductImageTableRowController.m in Sources */,
 				F58D93931AE9451A0079E843 /* OnboardingViewController.m in Sources */,
@@ -568,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEF55EA1AEAD8C100C08BBF /* LBStripeCharger.m in Sources */,
 				9FDF25651AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */,
 				9F301BB31AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */,
 				F50AB59F1AE9415A00C3DB23 /* Lobby_BoyTests.m in Sources */,
