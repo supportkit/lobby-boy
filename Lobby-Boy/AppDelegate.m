@@ -11,6 +11,14 @@
 #import "OnboardingContentViewController.h"
 #import <SupportKit/SupportKit.h>
 #import "LBUserInfoViewController.h"
+#import "LBRootViewController.h"
+#import "Stripe.h"
+
+NSString * const kStripePublishableKey = @"pk_test_XMVpxPrQVvXdN8x98LKZ1m8y";
+NSString * const kSupportKitAppToken = @"4u59574vijr8b5kerej0fy6z0";
+NSString * const kSetupCompleteKey = @"setupComplete";
+NSString * const kPaymentServerBaseUrl = @"https://lobbyboy.herokuapp.com";
+NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
 
 @interface AppDelegate ()
 
@@ -23,7 +31,9 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    SKTSettings* sksettings = [SKTSettings settingsWithAppToken:@"444t1zbnnf8wrj4a5ts8keilx"];
+    [Stripe setDefaultPublishableKey:kStripePublishableKey];
+    
+    SKTSettings* sksettings = [SKTSettings settingsWithAppToken:kSupportKitAppToken];
     sksettings.enableAppWideGesture = NO;
     sksettings.enableGestureHintOnFirstLaunch = NO;
     
@@ -31,7 +41,7 @@
     
     //Show the onboarding controller if setup is not complete
     NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
-    if(![def boolForKey:@"setupComplete"]) {
+    if(![def boolForKey:kSetupCompleteKey]) {
         OnboardingContentViewController* firstPage = [OnboardingContentViewController contentWithTitle:@"Nice to meet you!"
                                                                                                   body:@"Get whatever you want, anytime, with no hassle"
                                                                                                  image:[UIImage imageNamed:@"lobbyboy.jpg"] buttonText:nil action:nil];
@@ -49,6 +59,8 @@
         
         onboardingVC.shouldFadeTransitions = YES;
         self.window.rootViewController = onboardingVC;
+    } else {
+        self.window.rootViewController = [[LBRootViewController alloc] initWithNibName:@"LBRootViewController" bundle:nil];
     }
     
     
@@ -60,6 +72,12 @@
 -(void)showUserInfo {
     [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         self.window.rootViewController = [[LBUserInfoViewController alloc] initWithNibName:@"LBUserInfoViewController" bundle:nil];
+    } completion:nil];
+}
+
+-(void)showDefaultRoot {
+    [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        self.window.rootViewController = [[LBRootViewController alloc] initWithNibName:@"LBRootViewController" bundle:nil];
     } completion:nil];
 }
 
