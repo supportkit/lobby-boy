@@ -103,4 +103,24 @@ NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply {
+    NSString *value = userInfo[@"key"];
+    if ([value isEqualToString:@"loadImage"]) {
+        NSURL *url = [NSURL URLWithString:userInfo[@"urlString"]];
+        UIImage *image = nil;
+        NSData *data = nil;
+        BOOL cached = YES;
+        if (!image) {
+            cached = NO;
+            data = [NSData dataWithContentsOfURL:url];
+            image = [UIImage imageWithData:data];
+        } else {
+            data = UIImageJPEGRepresentation(image, 1);
+        }
+        if (data) {
+            reply(@{@"result":data, @"isFromCache":@(cached)});
+        }
+    }
+}
+
 @end

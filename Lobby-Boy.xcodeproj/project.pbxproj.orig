@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		275FDDB31AEA7C4000F964D4 /* SupportKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 275FDDB11AEA7C4000F964D4 /* SupportKit.bundle */; };
 		275FDDB41AEA7C4000F964D4 /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDB21AEA7C4000F964D4 /* SupportKit.framework */; };
 		275FDDB61AEA7C5900F964D4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDB51AEA7C5900F964D4 /* libxml2.dylib */; };
@@ -15,6 +16,7 @@
 		275FDDBC1AEA7C7F00F964D4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDBB1AEA7C7F00F964D4 /* CoreText.framework */; };
 		275FDDBE1AEA7C8800F964D4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDBD1AEA7C8800F964D4 /* OpenGLES.framework */; };
 		275FDDC01AEA7C9300F964D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDBF1AEA7C9300F964D4 /* SystemConfiguration.framework */; };
+=======
 		9F301B501AE9707300324DA4 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301B4F1AE9707300324DA4 /* InterfaceController.m */; };
 		9F301B531AE9707300324DA4 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301B521AE9707300324DA4 /* NotificationController.m */; };
 		9F301B551AE9707300324DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F301B541AE9707300324DA4 /* Images.xcassets */; };
@@ -31,6 +33,7 @@
 		9FDF25641AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
 		9FDF25651AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
 		9FDF25661AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
+>>>>>>> 26d4bda9986b294979524a0ec4b9de087d3a5de0
 		C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72865DC11A6E56110BA11C52 /* libPods.a */; };
 		F50AB5851AE9415A00C3DB23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5841AE9415A00C3DB23 /* main.m */; };
 		F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5871AE9415A00C3DB23 /* AppDelegate.m */; };
@@ -543,8 +546,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FDF25641AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */,
+<<<<<<< HEAD
 				F5A36F481AE9858200A9F06C /* LBRootViewController.m in Sources */,
+=======
+				9FDF25641AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */,
+>>>>>>> 26d4bda9986b294979524a0ec4b9de087d3a5de0
 				F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */,
 				9F301BB21AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */,
 				F52557691AE94E92009D887D /* LBUserInfoViewController.m in Sources */,
