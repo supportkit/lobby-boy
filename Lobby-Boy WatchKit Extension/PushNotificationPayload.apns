@@ -1,7 +1,7 @@
 {
     "aps": {
         "alert": {
-            "body": "You should buy this dress",
+            "body": "Found something for you",
             "title": "Optional title"
         },
         "category": "myCategory",

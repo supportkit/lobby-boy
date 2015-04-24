@@ -48,7 +48,13 @@
     
     LBProductLabelTableRowController *row2 = [self.table rowControllerAtIndex:1];
     
-    [row2.label setText:[NSString stringWithFormat:@"%@ - %@",productName, productPrice]];
+    [row2.label setText:productName];
+    
+    [row2.price setText:[NSString stringWithFormat:@"$%@",productPrice]];
+}
+
+- (IBAction)buyButtonAction {
+    NSLog(@"Pressed the buy button");
 }
 
 @end
