@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9E511148451DB82B91F3324B7CC79C4A8C199EC6</key>
-		<string>github.personal:radialpoint/lobby-boy.git</string>
+		<string>https://github.com/supportkit/lobby-boy.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Lobby-Boy.xcworkspace</string>
@@ -21,7 +21,7 @@
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.personal:radialpoint/lobby-boy.git</string>
+	<string>https://github.com/supportkit/lobby-boy.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
