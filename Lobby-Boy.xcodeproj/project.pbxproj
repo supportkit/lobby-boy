@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F301B501AE9707300324DA4 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301B4F1AE9707300324DA4 /* InterfaceController.m */; };
+		9F301B531AE9707300324DA4 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301B521AE9707300324DA4 /* NotificationController.m */; };
+		9F301B551AE9707300324DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F301B541AE9707300324DA4 /* Images.xcassets */; };
+		9F301B591AE9707300324DA4 /* Lobby-Boy WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 9F301B581AE9707300324DA4 /* Lobby-Boy WatchKit App.app */; };
+		9F301B611AE9707300324DA4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F301B5F1AE9707300324DA4 /* Interface.storyboard */; };
+		9F301B631AE9707300324DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F301B621AE9707300324DA4 /* Images.xcassets */; };
+		9F301B661AE9707300324DA4 /* Lobby-Boy WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9F301B491AE9707300324DA4 /* Lobby-Boy WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9F301BAD1AE98EC700324DA4 /* LBProductImageTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301BAC1AE98EC700324DA4 /* LBProductImageTableRowController.m */; };
+		9F301BAE1AE98EC700324DA4 /* LBProductImageTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301BAC1AE98EC700324DA4 /* LBProductImageTableRowController.m */; };
+		9F301BAF1AE98EC700324DA4 /* LBProductImageTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301BAC1AE98EC700324DA4 /* LBProductImageTableRowController.m */; };
+		9F301BB21AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301BB11AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m */; };
+		9F301BB31AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301BB11AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m */; };
+		9F301BB41AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301BB11AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m */; };
+		9FDF25641AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
+		9FDF25651AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
+		9FDF25661AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */; };
 		C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72865DC11A6E56110BA11C52 /* libPods.a */; };
 		F50AB5851AE9415A00C3DB23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5841AE9415A00C3DB23 /* main.m */; };
 		F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5871AE9415A00C3DB23 /* AppDelegate.m */; };
@@ -23,6 +39,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9F301B5A1AE9707300324DA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50AB5771AE9415900C3DB23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F301B571AE9707300324DA4;
+			remoteInfo = "Lobby-Boy WatchKit App";
+		};
+		9F301B641AE9707300324DA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50AB5771AE9415900C3DB23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F301B481AE9707300324DA4;
+			remoteInfo = "Lobby-Boy WatchKit Extension";
+		};
 		F50AB5991AE9415A00C3DB23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F50AB5771AE9415900C3DB23 /* Project object */;
@@ -32,9 +62,41 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9F301B6D1AE9707300324DA4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9F301B661AE9707300324DA4 /* Lobby-Boy WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		261E6C0168F9C063DE3A2E79 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		72865DC11A6E56110BA11C52 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F301B491AE9707300324DA4 /* Lobby-Boy WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Lobby-Boy WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F301B4C1AE9707300324DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F301B4D1AE9707300324DA4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		9F301B4E1AE9707300324DA4 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		9F301B4F1AE9707300324DA4 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		9F301B511AE9707300324DA4 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		9F301B521AE9707300324DA4 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		9F301B541AE9707300324DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F301B581AE9707300324DA4 /* Lobby-Boy WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lobby-Boy WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F301B5E1AE9707300324DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F301B601AE9707300324DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9F301B621AE9707300324DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F301BAB1AE98EC700324DA4 /* LBProductImageTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBProductImageTableRowController.h; sourceTree = "<group>"; };
+		9F301BAC1AE98EC700324DA4 /* LBProductImageTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBProductImageTableRowController.m; sourceTree = "<group>"; };
+		9F301BB01AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKInterfaceImage+ParentLoad.h"; sourceTree = "<group>"; };
+		9F301BB11AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKInterfaceImage+ParentLoad.m"; sourceTree = "<group>"; };
+		9FDF25621AE9A83E00F2748E /* LBProductLabelTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBProductLabelTableRowController.h; sourceTree = "<group>"; };
+		9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBProductLabelTableRowController.m; sourceTree = "<group>"; };
 		B715EEF2381B7720365C4CB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F50AB57F1AE9415900C3DB23 /* Lobby-Boy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lobby-Boy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50AB5831AE9415A00C3DB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +121,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9F301B461AE9707300324DA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F50AB57C1AE9415900C3DB23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +154,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F301B4A1AE9707300324DA4 /* Lobby-Boy WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9F301BB01AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.h */,
+				9F301BB11AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m */,
+				9F301B4E1AE9707300324DA4 /* InterfaceController.h */,
+				9F301B4F1AE9707300324DA4 /* InterfaceController.m */,
+				9F301B511AE9707300324DA4 /* NotificationController.h */,
+				9F301B521AE9707300324DA4 /* NotificationController.m */,
+				9F301BAB1AE98EC700324DA4 /* LBProductImageTableRowController.h */,
+				9F301BAC1AE98EC700324DA4 /* LBProductImageTableRowController.m */,
+				9F301B541AE9707300324DA4 /* Images.xcassets */,
+				9F301B4B1AE9707300324DA4 /* Supporting Files */,
+				9FDF25621AE9A83E00F2748E /* LBProductLabelTableRowController.h */,
+				9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */,
+			);
+			path = "Lobby-Boy WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		9F301B4B1AE9707300324DA4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F301B4C1AE9707300324DA4 /* Info.plist */,
+				9F301B4D1AE9707300324DA4 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F301B5C1AE9707300324DA4 /* Lobby-Boy WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				9F301B5F1AE9707300324DA4 /* Interface.storyboard */,
+				9F301B621AE9707300324DA4 /* Images.xcassets */,
+				9F301B5D1AE9707300324DA4 /* Supporting Files */,
+			);
+			path = "Lobby-Boy WatchKit App";
+			sourceTree = "<group>";
+		};
+		9F301B5D1AE9707300324DA4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F301B5E1AE9707300324DA4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E7FA1DF344BC8B1CACE1AEB0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +214,8 @@
 			children = (
 				F50AB5811AE9415900C3DB23 /* Lobby-Boy */,
 				F50AB59B1AE9415A00C3DB23 /* Lobby-BoyTests */,
+				9F301B4A1AE9707300324DA4 /* Lobby-Boy WatchKit Extension */,
+				9F301B5C1AE9707300324DA4 /* Lobby-Boy WatchKit App */,
 				F50AB5801AE9415900C3DB23 /* Products */,
 				E7FA1DF344BC8B1CACE1AEB0 /* Pods */,
 				34E743C0C7B42B7C8AC63817 /* Frameworks */,
@@ -110,6 +227,8 @@
 			children = (
 				F50AB57F1AE9415900C3DB23 /* Lobby-Boy.app */,
 				F50AB5981AE9415A00C3DB23 /* Lobby-BoyTests.xctest */,
+				9F301B491AE9707300324DA4 /* Lobby-Boy WatchKit Extension.appex */,
+				9F301B581AE9707300324DA4 /* Lobby-Boy WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +300,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9F301B481AE9707300324DA4 /* Lobby-Boy WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F301B6C1AE9707300324DA4 /* Build configuration list for PBXNativeTarget "Lobby-Boy WatchKit Extension" */;
+			buildPhases = (
+				9F301B451AE9707300324DA4 /* Sources */,
+				9F301B461AE9707300324DA4 /* Frameworks */,
+				9F301B471AE9707300324DA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F301B5B1AE9707300324DA4 /* PBXTargetDependency */,
+			);
+			name = "Lobby-Boy WatchKit Extension";
+			productName = "Lobby-Boy WatchKit Extension";
+			productReference = 9F301B491AE9707300324DA4 /* Lobby-Boy WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		9F301B571AE9707300324DA4 /* Lobby-Boy WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F301B6B1AE9707300324DA4 /* Build configuration list for PBXNativeTarget "Lobby-Boy WatchKit App" */;
+			buildPhases = (
+				9F301B561AE9707300324DA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lobby-Boy WatchKit App";
+			productName = "Lobby-Boy WatchKit App";
+			productReference = 9F301B581AE9707300324DA4 /* Lobby-Boy WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		F50AB57E1AE9415900C3DB23 /* Lobby-Boy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F50AB5A21AE9415A00C3DB23 /* Build configuration list for PBXNativeTarget "Lobby-Boy" */;
@@ -190,10 +342,12 @@
 				F50AB57C1AE9415900C3DB23 /* Frameworks */,
 				F50AB57D1AE9415900C3DB23 /* Resources */,
 				DD123DD9622D5460C81D4499 /* Copy Pods Resources */,
+				9F301B6D1AE9707300324DA4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9F301B651AE9707300324DA4 /* PBXTargetDependency */,
 			);
 			name = "Lobby-Boy";
 			productName = "Lobby-Boy";
@@ -227,6 +381,12 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = SupportKit.io;
 				TargetAttributes = {
+					9F301B481AE9707300324DA4 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					9F301B571AE9707300324DA4 = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					F50AB57E1AE9415900C3DB23 = {
 						CreatedOnToolsVersion = 6.3;
 					};
@@ -251,11 +411,31 @@
 			targets = (
 				F50AB57E1AE9415900C3DB23 /* Lobby-Boy */,
 				F50AB5971AE9415A00C3DB23 /* Lobby-BoyTests */,
+				9F301B481AE9707300324DA4 /* Lobby-Boy WatchKit Extension */,
+				9F301B571AE9707300324DA4 /* Lobby-Boy WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F301B471AE9707300324DA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F301B591AE9707300324DA4 /* Lobby-Boy WatchKit App.app in Resources */,
+				9F301B551AE9707300324DA4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F301B561AE9707300324DA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F301B611AE9707300324DA4 /* Interface.storyboard in Resources */,
+				9F301B631AE9707300324DA4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F50AB57D1AE9415900C3DB23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,13 +492,28 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9F301B451AE9707300324DA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F301BAF1AE98EC700324DA4 /* LBProductImageTableRowController.m in Sources */,
+				9F301B531AE9707300324DA4 /* NotificationController.m in Sources */,
+				9FDF25661AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */,
+				9F301B501AE9707300324DA4 /* InterfaceController.m in Sources */,
+				9F301BB41AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F50AB57B1AE9415900C3DB23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FDF25641AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */,
 				F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */,
+				9F301BB21AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */,
 				F52557691AE94E92009D887D /* LBUserInfoViewController.m in Sources */,
 				F50AB5851AE9415A00C3DB23 /* main.m in Sources */,
+				9F301BAD1AE98EC700324DA4 /* LBProductImageTableRowController.m in Sources */,
 				F58D93931AE9451A0079E843 /* OnboardingViewController.m in Sources */,
 				F58D93921AE9451A0079E843 /* OnboardingContentViewController.m in Sources */,
 			);
@@ -328,13 +523,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FDF25651AE9A83E00F2748E /* LBProductLabelTableRowController.m in Sources */,
+				9F301BB31AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m in Sources */,
 				F50AB59F1AE9415A00C3DB23 /* Lobby_BoyTests.m in Sources */,
+				9F301BAE1AE98EC700324DA4 /* LBProductImageTableRowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9F301B5B1AE9707300324DA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F301B571AE9707300324DA4 /* Lobby-Boy WatchKit App */;
+			targetProxy = 9F301B5A1AE9707300324DA4 /* PBXContainerItemProxy */;
+		};
+		9F301B651AE9707300324DA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F301B481AE9707300324DA4 /* Lobby-Boy WatchKit Extension */;
+			targetProxy = 9F301B641AE9707300324DA4 /* PBXContainerItemProxy */;
+		};
 		F50AB59A1AE9415A00C3DB23 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F50AB57E1AE9415900C3DB23 /* Lobby-Boy */;
@@ -342,7 +550,74 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		9F301B5F1AE9707300324DA4 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F301B601AE9707300324DA4 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		9F301B671AE9707300324DA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lobby-Boy WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9F301B681AE9707300324DA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Lobby-Boy WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9F301B691AE9707300324DA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Lobby_Boy_WatchKit_Extension;
+				INFOPLIST_FILE = "Lobby-Boy WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		9F301B6A1AE9707300324DA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Lobby_Boy_WatchKit_Extension;
+				INFOPLIST_FILE = "Lobby-Boy WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		F50AB5A01AE9415A00C3DB23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -482,6 +757,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9F301B6B1AE9707300324DA4 /* Build configuration list for PBXNativeTarget "Lobby-Boy WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F301B691AE9707300324DA4 /* Debug */,
+				9F301B6A1AE9707300324DA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F301B6C1AE9707300324DA4 /* Build configuration list for PBXNativeTarget "Lobby-Boy WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F301B671AE9707300324DA4 /* Debug */,
+				9F301B681AE9707300324DA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F50AB57A1AE9415900C3DB23 /* Build configuration list for PBXProject "Lobby-Boy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
