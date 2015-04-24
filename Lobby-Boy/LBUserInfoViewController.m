@@ -60,7 +60,7 @@
                                                               
                                                               [SupportKit track:@"Account Setup Complete"];
                                                               [[NSUserDefaults standardUserDefaults] setObject:customerToken forKey:kCustomerTokenKey];
-                                                              //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:kSetupCompleteKey];
+                                                              [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kSetupCompleteKey];
                                                               
                                                               [MBProgressHUD hideHUDForView:self.view animated:YES];
                                                               
@@ -70,7 +70,6 @@
                                                       }];
                                                   }
                                               }];
-        
     }
 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Arvil_Sans.ttf">
@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.29999999999999966" contentMode="center" ambiguous="YES" misplaced="YES" image="lobbyboy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2GP-2S-fIy">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="lobbyboy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2GP-2S-fIy">
                     <rect key="frame" x="99" y="91" width="400" height="300"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="0FV-Sp-JWp"/>
@@ -89,6 +89,6 @@
         </view>
     </objects>
     <resources>
-        <image name="lobbyboy.jpg" width="400" height="300"/>
+        <image name="lobbyboy.jpg" width="141" height="74"/>
     </resources>
 </document>

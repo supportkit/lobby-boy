@@ -35,7 +35,8 @@ NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
     SKTSettings* skSettings = [SKTSettings settingsWithAppToken:kSupportKitAppToken];
     skSettings.enableAppWideGesture = NO;
     skSettings.enableGestureHintOnFirstLaunch = NO;
-    
+    skSettings.conversationAccentColor = [UIColor colorWithRed:145.0/255.0 green:45.0/255.0 blue:141.0/255.0 alpha:1.0];
+
     [SupportKit initWithSettings:skSettings];
     
     //Show the onboarding controller if setup is not complete

@@ -9,8 +9,16 @@
 #import "LBRootViewController.h"
 #import <SupportKit/SupportKit.h>
 #import "AppDelegate.h"
+#import "MBProgressHud.h"
 
 @implementation LBRootViewController
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [SupportKit conversation].delegate = self;
+}
 
 -(IBAction)talkAction:(id)sender
 {
@@ -26,11 +34,15 @@
     NSString *body     = [NSString stringWithFormat:@"customerId=%@&amount=%ld", [[NSUserDefaults standardUserDefaults] objectForKey:kCustomerTokenKey], [price longValue]];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
+    [MBProgressHUD showHUDAddedTo:self.presentedViewController.view animated:YES];
+    
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,
                                                NSData *data,
                                                NSError *error) {
+                               [MBProgressHUD hideHUDForView:self.presentedViewController.view animated:YES];
+                               
                                if (error) {
                                    NSLog(@"%@", [error description]);
                                    [[[UIAlertView alloc] initWithTitle:@"Purchase Failed" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
