@@ -9,41 +9,40 @@
 #import "LBRootViewController.h"
 #import <SupportKit/SupportKit.h>
 #import "AppDelegate.h"
-
-@interface LBRootViewController ()
-
-@end
+#import "MBProgressHud.h"
 
 @implementation LBRootViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
     [SupportKit conversation].delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(IBAction)talkAction:(id)sender {
+-(IBAction)talkAction:(id)sender
+{
     [SupportKit showConversation];
 }
 
 -(void)conversation:(SKTConversation *)conversation didSelectBuyWithInfo:(SKTMessageBuyInfo*)buyInfo completion:(void (^)(BOOL))completion {
     
-    NSNumber* price = [NSNumber numberWithFloat:(buyInfo.price * 100.0)];
+    NSNumber* price = @(buyInfo.price * 100.0);
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/charge", kPaymentServerBaseUrl]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body     = [NSString stringWithFormat:@"customerId=%@&amount=%ld", [[NSUserDefaults standardUserDefaults] objectForKey:kCustomerTokenKey], [price longValue]];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
+    [MBProgressHUD showHUDAddedTo:self.presentedViewController.view animated:YES];
+    
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,
                                                NSData *data,
                                                NSError *error) {
+                               [MBProgressHUD hideHUDForView:self.presentedViewController.view animated:YES];
+                               
                                if (error) {
                                    NSLog(@"%@", [error description]);
                                    [[[UIAlertView alloc] initWithTitle:@"Purchase Failed" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
