@@ -20,11 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="lobbyboy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2GP-2S-fIy">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lobbyboy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2GP-2S-fIy">
                     <rect key="frame" x="99" y="91" width="400" height="300"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="0FV-Sp-JWp"/>
                         <constraint firstAttribute="width" constant="400" id="WCH-NF-tLM"/>
+                        <constraint firstAttribute="width" constant="400" id="fTN-Mv-uzJ"/>
+                        <constraint firstAttribute="height" constant="300" id="jZX-en-1ut"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
@@ -41,7 +43,7 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ5-p4-MN4">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <fontDescription key="fontDescription" name="ArvilSans" family="Arvil" pointSize="37"/>
+                    <fontDescription key="fontDescription" name="ArvilSans" family="Arvil" pointSize="21"/>
                     <state key="normal" title="Talk to your Lobby Boy">
                         <color key="titleColor" red="0.56862745100000001" green="0.1764705882" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,9 +59,11 @@
             <color key="backgroundColor" red="0.92941176470588238" green="0.70196078431372544" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2GP-2S-fIy" secondAttribute="trailing" id="6tk-ab-V1a"/>
+                <constraint firstItem="2GP-2S-fIy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="99" id="DpV-Pp-dpO"/>
                 <constraint firstItem="2GP-2S-fIy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="Hg8-sV-Erq"/>
                 <constraint firstItem="XQ5-p4-MN4" firstAttribute="top" secondItem="2GP-2S-fIy" secondAttribute="bottom" constant="8" id="IxD-Ph-QbP"/>
                 <constraint firstAttribute="centerX" secondItem="XQ5-p4-MN4" secondAttribute="centerX" id="bbf-r0-9sq"/>
+                <constraint firstItem="2GP-2S-fIy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="91" id="bet-ea-kkx"/>
                 <constraint firstItem="2GP-2S-fIy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eaJ-V9-7D6"/>
             </constraints>
             <variation key="default">
