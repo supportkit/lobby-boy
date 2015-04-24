@@ -15,8 +15,9 @@
                                 <tableRow identifier="product-image" id="j6N-QP-5Ky" customClass="LBProductImageTableRowController">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="OLx-jh-mTl">
                                         <items>
-                                            <imageView alignment="center" image="lobbyboy.jpg" id="Yj4-RQ-Kcz"/>
+                                            <imageView width="1" alignment="center" image="lobbyboy.jpg" id="Yj4-RQ-Kcz"/>
                                         </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
                                         <outlet property="image" destination="Yj4-RQ-Kcz" id="xGn-PE-nCf"/>
@@ -34,6 +35,7 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <button width="1" alignment="left" title="Buy" id="Jfm-ra-t0c"/>
                     </items>
                     <connections>
                         <outlet property="table" destination="sRu-Vj-oAq" id="rfq-WT-6GG"/>
@@ -47,7 +49,7 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="You should buy this dress!" numberOfLines="2" id="IdU-wH-bcW"/>
+                        <label alignment="left" text="You should buy this one!" numberOfLines="2" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
