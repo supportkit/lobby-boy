@@ -30,9 +30,3 @@
 #define COCOAPODS_VERSION_MINOR_Stripe_Core 1
 #define COCOAPODS_VERSION_PATCH_Stripe_Core 0
 
-// SupportKit
-#define COCOAPODS_POD_AVAILABLE_SupportKit
-#define COCOAPODS_VERSION_MAJOR_SupportKit 2
-#define COCOAPODS_VERSION_MINOR_SupportKit 7
-#define COCOAPODS_VERSION_PATCH_SupportKit 0
-

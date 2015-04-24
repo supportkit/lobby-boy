@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275FDDB31AEA7C4000F964D4 /* SupportKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 275FDDB11AEA7C4000F964D4 /* SupportKit.bundle */; };
+		275FDDB41AEA7C4000F964D4 /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDB21AEA7C4000F964D4 /* SupportKit.framework */; };
+		275FDDB61AEA7C5900F964D4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDB51AEA7C5900F964D4 /* libxml2.dylib */; };
+		275FDDB81AEA7C7700F964D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDB71AEA7C7700F964D4 /* CoreGraphics.framework */; };
+		275FDDBA1AEA7C7B00F964D4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDB91AEA7C7B00F964D4 /* CoreTelephony.framework */; };
+		275FDDBC1AEA7C7F00F964D4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDBB1AEA7C7F00F964D4 /* CoreText.framework */; };
+		275FDDBE1AEA7C8800F964D4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDBD1AEA7C8800F964D4 /* OpenGLES.framework */; };
+		275FDDC01AEA7C9300F964D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275FDDBF1AEA7C9300F964D4 /* SystemConfiguration.framework */; };
 		C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72865DC11A6E56110BA11C52 /* libPods.a */; };
 		F50AB5851AE9415A00C3DB23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5841AE9415A00C3DB23 /* main.m */; };
 		F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5871AE9415A00C3DB23 /* AppDelegate.m */; };
@@ -34,6 +42,14 @@
 
 /* Begin PBXFileReference section */
 		261E6C0168F9C063DE3A2E79 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		275FDDB11AEA7C4000F964D4 /* SupportKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SupportKit.bundle; sourceTree = "<group>"; };
+		275FDDB21AEA7C4000F964D4 /* SupportKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportKit.framework; sourceTree = "<group>"; };
+		275FDDB51AEA7C5900F964D4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		275FDDB71AEA7C7700F964D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		275FDDB91AEA7C7B00F964D4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		275FDDBB1AEA7C7F00F964D4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		275FDDBD1AEA7C8800F964D4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		275FDDBF1AEA7C9300F964D4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		72865DC11A6E56110BA11C52 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B715EEF2381B7720365C4CB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F50AB57F1AE9415900C3DB23 /* Lobby-Boy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lobby-Boy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +81,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275FDDC01AEA7C9300F964D4 /* SystemConfiguration.framework in Frameworks */,
+				275FDDBE1AEA7C8800F964D4 /* OpenGLES.framework in Frameworks */,
+				275FDDBC1AEA7C7F00F964D4 /* CoreText.framework in Frameworks */,
+				275FDDBA1AEA7C7B00F964D4 /* CoreTelephony.framework in Frameworks */,
+				275FDDB81AEA7C7700F964D4 /* CoreGraphics.framework in Frameworks */,
+				275FDDB61AEA7C5900F964D4 /* libxml2.dylib in Frameworks */,
 				C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */,
+				275FDDB41AEA7C4000F964D4 /* SupportKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +105,14 @@
 		34E743C0C7B42B7C8AC63817 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				275FDDBF1AEA7C9300F964D4 /* SystemConfiguration.framework */,
+				275FDDBD1AEA7C8800F964D4 /* OpenGLES.framework */,
+				275FDDBB1AEA7C7F00F964D4 /* CoreText.framework */,
+				275FDDB91AEA7C7B00F964D4 /* CoreTelephony.framework */,
+				275FDDB71AEA7C7700F964D4 /* CoreGraphics.framework */,
+				275FDDB51AEA7C5900F964D4 /* libxml2.dylib */,
+				275FDDB11AEA7C4000F964D4 /* SupportKit.bundle */,
+				275FDDB21AEA7C4000F964D4 /* SupportKit.framework */,
 				72865DC11A6E56110BA11C52 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -268,6 +299,7 @@
 				F58D93831AE941F00079E843 /* lobbyboy.jpg in Resources */,
 				F50AB5901AE9415A00C3DB23 /* Images.xcassets in Resources */,
 				F58D93971AE94A840079E843 /* salmon.png in Resources */,
+				275FDDB31AEA7C4000F964D4 /* SupportKit.bundle in Resources */,
 				F525576A1AE94E92009D887D /* LBUserInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +464,10 @@
 			baseConfigurationReference = 261E6C0168F9C063DE3A2E79 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Lobby-Boy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,6 +479,10 @@
 			baseConfigurationReference = B715EEF2381B7720365C4CB5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Lobby-Boy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
