@@ -13,12 +13,7 @@
 #import "LBUserInfoViewController.h"
 #import "LBRootViewController.h"
 #import "Stripe.h"
-
-NSString * const kStripePublishableKey = @"pk_test_XMVpxPrQVvXdN8x98LKZ1m8y";
-NSString * const kSupportKitAppToken = @"4u59574vijr8b5kerej0fy6z0";
-NSString * const kSetupCompleteKey = @"setupComplete";
-NSString * const kPaymentServerBaseUrl = @"https://lobbyboy.herokuapp.com";
-NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
+#import "LBStripeCharger.h"
 
 @interface AppDelegate ()
 
@@ -137,6 +132,20 @@ NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
         if (data) {
             reply(@{@"result":data, @"isFromCache":@(cached)});
         }
+    }else if ([value isEqualToString:@"buy"]){
+        NSNumber *price = userInfo[@"price"];
+        [LBStripeCharger change:price withCompletionHandler:^(NSURLResponse *response,
+                                                             NSData *data,
+                                                             NSError *error) {
+            
+            if (error) {
+                NSLog(@"Charged from the watch");
+                reply(@{@"error":@YES});
+            } else {
+                NSLog(@"Failled to charge from the watch");
+                reply(@{@"error":@NO});
+            }
+        }];
     }
 }
 

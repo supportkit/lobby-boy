@@ -37,8 +37,7 @@
 }
 
 - (void)handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)remoteNotification{
-    NSDictionary * aps = [remoteNotification valueForKey:@"aps"];
-    NSDictionary * offer = [aps valueForKey:@"offer"];
+    NSDictionary * offer = [remoteNotification valueForKey:@"offer"];
     NSString* imageUrl = [offer valueForKey:@"image-url"];
     
     NSString* productName = [offer valueForKey:@"product-name"];
@@ -52,10 +51,25 @@
     [row2.label setText:productName];
     
     [row2.price setText:[NSString stringWithFormat:@"$%@",productPrice]];
+    
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    
+    self.currentItemPrice = [f numberFromString:productPrice];
 }
 
 - (IBAction)buyButtonAction {
     NSLog(@"Pressed the buy button");
+    
+    [WKInterfaceController openParentApplication:@{@"key":@"buy", @"price":self.currentItemPrice} reply:^(NSDictionary *replyInfo, NSError *error) {
+        LBProductLabelTableRowController *row2 = [self.table rowControllerAtIndex:1];
+        NSNumber *hadError = replyInfo[@"error"];
+        if (hadError) {
+            [row2.label setText:@"Error happended!"];
+        }else{
+            [row2.label setText:@"Purchased"];
+        }
+    }];
 }
 
 @end

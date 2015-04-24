@@ -33,6 +33,7 @@
                                                 <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                             </label>
                                         </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
                                         <outlet property="label" destination="p7G-p1-7WC" id="OQw-sh-ux8"/>

@@ -10,6 +10,7 @@
 #import <SupportKit/SupportKit.h>
 #import "AppDelegate.h"
 #import "MBProgressHud.h"
+#import "LBStripeCharger.h"
 
 @implementation LBRootViewController
 
@@ -26,33 +27,21 @@
 }
 
 -(void)conversation:(SKTConversation *)conversation didSelectBuyWithInfo:(SKTMessageBuyInfo*)buyInfo completion:(void (^)(BOOL))completion {
-    
-    NSNumber* price = @(buyInfo.price * 100.0);
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/charge", kPaymentServerBaseUrl]];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"customerId=%@&amount=%ld", [[NSUserDefaults standardUserDefaults] objectForKey:kCustomerTokenKey], [price longValue]];
-    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
-    
     [MBProgressHUD showHUDAddedTo:self.presentedViewController.view animated:YES];
     
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response,
-                                               NSData *data,
-                                               NSError *error) {
-                               [MBProgressHUD hideHUDForView:self.presentedViewController.view animated:YES];
-                               
-                               if (error) {
-                                   NSLog(@"%@", [error description]);
-                                   [[[UIAlertView alloc] initWithTitle:@"Purchase Failed" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
-                               } else {
-                                   [SupportKit track:@"Purchase"];
-                                   
-                                   [conversation sendMessage:[[SKTMessage alloc] initWithText:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]]];
-                               }
-                               completion(error == nil);
-                           }];
+    [LBStripeCharger change:@(buyInfo.price) withCompletionHandler:^(NSURLResponse *response,
+                                                                    NSData *data,
+                                                                    NSError *error) {
+        [MBProgressHUD hideHUDForView:self.presentedViewController.view animated:YES];
+        
+        if (error) {
+            [[[UIAlertView alloc] initWithTitle:@"Purchase Failed" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+        } else {
+            [SupportKit track:@"Purchase"];
+            [conversation sendMessage:[[SKTMessage alloc] initWithText:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]]];
+        }
+        completion(error == nil);
+    }];
 }
 
 -(void)conversation:(SKTConversation *)conversation didSelectMoreInfo:(SKTMessageBuyInfo*)buyInfo {
