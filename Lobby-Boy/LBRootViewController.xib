@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lobbyboy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2GP-2S-fIy">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="lobby-logo-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2GP-2S-fIy">
                     <rect key="frame" x="99" y="91" width="400" height="300"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="0FV-Sp-JWp"/>
@@ -56,7 +56,6 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.92941176470588238" green="0.70196078431372544" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2GP-2S-fIy" secondAttribute="trailing" id="6tk-ab-V1a"/>
                 <constraint firstItem="2GP-2S-fIy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="99" id="DpV-Pp-dpO"/>
@@ -93,6 +92,6 @@
         </view>
     </objects>
     <resources>
-        <image name="lobbyboy.jpg" width="141" height="74"/>
+        <image name="lobby-logo-1.png" width="241" height="129"/>
     </resources>
 </document>
