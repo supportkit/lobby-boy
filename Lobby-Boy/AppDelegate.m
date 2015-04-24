@@ -29,6 +29,7 @@ NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     [Stripe setDefaultPublishableKey:kStripePublishableKey];
     
@@ -43,27 +44,43 @@ NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
     NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
     if(![def boolForKey:kSetupCompleteKey]) {
         OnboardingContentViewController* firstPage = [OnboardingContentViewController contentWithTitle:@"Nice to meet you!"
-                                                                                                  body:@"Get whatever you want, anytime, with no hassle"
-                                                                                                 image:[UIImage imageNamed:@"lobbyboy.jpg"] buttonText:nil action:nil];
+                                                                                                  body:@"Grant your customers' wishes on demand over beautifully simple messaging."
+                                                                                                 image:[UIImage imageNamed:@"lobby-logo-1"] buttonText:nil action:nil];
+        firstPage.topPadding = 100;
+        firstPage.underIconPadding = 195;
         OnboardingContentViewController* secondPage = [OnboardingContentViewController contentWithTitle:@"How does it work?"
-                                                                                                   body:@"Text Lobby Boy anything you need, he'll handle it."
-                                                                                                  image:[UIImage imageNamed:@"lobbyboy.jpg"] buttonText:nil action:nil];
+                                                                                                   body:@"Ask Lobby Boy anything you need, product or service. He'll handle it."
+                                                                                                  image:[UIImage imageNamed:@"lobby-boy"] buttonText:nil action:nil];
+        secondPage.topPadding = 30;
+        secondPage.underIconPadding = 30;
         
-        OnboardingContentViewController* thirdPage = [OnboardingContentViewController contentWithTitle:@"Introduce yourself"
-                                                                                                   body:@"Tell us who you are and preload your credit card for fast checkout"
-                                                                                                  image:[UIImage imageNamed:@"lobbyboy.jpg"] buttonText:@"Get Started" action:^{
-                                                                                                      [self showUserInfo];
-                                                                                                  }];
+        OnboardingContentViewController* thirdPage = [OnboardingContentViewController contentWithTitle:@"Introduce Yourself"
+                                                                                                  body:@"Tell us who you are and preload your credit card for fast checkout."
+                                                                                                 image:[UIImage imageNamed:@"register"] buttonText:@"Get Started" action:^{
+                                                                                                     [self showUserInfo];
+                                                                                                 }];
+        thirdPage.topPadding = 0;
+        thirdPage.underIconPadding = 0;
+        thirdPage.iconWidth = self.window.bounds.size.width;
+        thirdPage.buttonFontSize = 18;
         
-        OnboardingViewController *onboardingVC = [OnboardingViewController onboardWithBackgroundImage:[UIImage imageNamed:@"salmon.png"] contents:@[firstPage, secondPage, thirdPage]];
+        OnboardingViewController *onboardingVC = [OnboardingViewController onboardWithBackgroundImage:nil contents:@[firstPage, secondPage, thirdPage]];
+        onboardingVC.pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.8 alpha:1.0];
+        onboardingVC.pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:85.0/255.0 green:85.0/255.0 blue:85.0/255.0 alpha:1.0];
+        onboardingVC.underTitlePadding = 10;
+        onboardingVC.bottomPadding = 50;
+        onboardingVC.titleFontSize = 25;
+        onboardingVC.bodyFontSize = 18;
+        onboardingVC.buttonTextColor = skSettings.conversationAccentColor;
+        onboardingVC.titleTextColor = [UIColor colorWithRed:85.0/255.0 green:85.0/255.0 blue:85.0/255.0 alpha:1.0];
+        onboardingVC.bodyTextColor = [UIColor colorWithRed:85.0/255.0 green:85.0/255.0 blue:85.0/255.0 alpha:1.0];
         
         onboardingVC.shouldFadeTransitions = YES;
         self.window.rootViewController = onboardingVC;
     } else {
         self.window.rootViewController = [[LBRootViewController alloc] initWithNibName:@"LBRootViewController" bundle:nil];
     }
-    
-    
+
     [self.window makeKeyAndVisible];
     
     return YES;
