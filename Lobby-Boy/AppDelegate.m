@@ -70,13 +70,13 @@ NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
 }
 
 -(void)showUserInfo {
-    [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+    [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
         self.window.rootViewController = [[LBUserInfoViewController alloc] initWithNibName:@"LBUserInfoViewController" bundle:nil];
     } completion:nil];
 }
 
 -(void)showDefaultRoot {
-    [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+    [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
         self.window.rootViewController = [[LBRootViewController alloc] initWithNibName:@"LBRootViewController" bundle:nil];
     } completion:nil];
 }
