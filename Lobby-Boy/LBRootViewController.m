@@ -36,7 +36,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/charge", kPaymentServerBaseUrl]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"customerId=%@&amount=%d", [[NSUserDefaults standardUserDefaults] objectForKey:kCustomerTokenKey], [price integerValue]];
+    NSString *body     = [NSString stringWithFormat:@"customerId=%@&amount=%ld", [[NSUserDefaults standardUserDefaults] objectForKey:kCustomerTokenKey], [price longValue]];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request
@@ -46,6 +46,7 @@
                                                NSError *error) {
                                if (error) {
                                    NSLog(@"%@", [error description]);
+                                   [[[UIAlertView alloc] initWithTitle:@"Purchase Failed" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
                                } else {
                                    [SupportKit track:@"Purchase"];
                                    

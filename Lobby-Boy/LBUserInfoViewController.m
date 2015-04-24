@@ -12,7 +12,7 @@
 #import "AppDelegate.h"
 #import "MBProgressHud.h"
 
-@interface LBUserInfoViewController ()
+@interface LBUserInfoViewController () < PTKViewDelegate >
 
 @end
 
