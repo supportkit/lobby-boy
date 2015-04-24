@@ -197,7 +197,7 @@ extern NSString* const SKTConversationNewMessagesKey;
  */
 -(void)conversation:(SKTConversation*)conversation didReceiveMessages:(NSArray*)messages;
 
--(void)conversation:(SKTConversation *)conversation didSelectBuyWithInfo:(SKTMessageBuyInfo*)buyInfo;
+-(void)conversation:(SKTConversation *)conversation didSelectBuyWithInfo:(SKTMessageBuyInfo*)buyInfo completion:(void (^)(BOOL success))completion;
 -(void)conversation:(SKTConversation *)conversation didSelectMoreInfo:(SKTMessageBuyInfo*)buyInfo;
 
 @end

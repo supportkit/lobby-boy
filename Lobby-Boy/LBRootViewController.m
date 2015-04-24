@@ -30,7 +30,7 @@
     [SupportKit showConversation];
 }
 
--(void)conversation:(SKTConversation *)conversation didSelectBuyWithInfo:(SKTMessageBuyInfo*)buyInfo {
+-(void)conversation:(SKTConversation *)conversation didSelectBuyWithInfo:(SKTMessageBuyInfo*)buyInfo completion:(void (^)(BOOL))completion {
     
     NSNumber* price = [NSNumber numberWithFloat:(buyInfo.price * 100.0)];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/charge", kPaymentServerBaseUrl]];
@@ -51,6 +51,7 @@
                                    
                                    [conversation sendMessage:[[SKTMessage alloc] initWithText:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]]];
                                }
+                               completion(error == nil);
                            }];
 }
 
