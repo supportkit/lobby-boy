@@ -13,4 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
 
+- (IBAction)buyButtonAction;
+
+@property (weak, nonatomic) IBOutlet WKInterfaceButton* buyButton;
+
 @end

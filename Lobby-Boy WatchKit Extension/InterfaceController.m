@@ -24,17 +24,6 @@
     [super awakeWithContext:context];
     
     [self.table setRowTypes:@[@"product-image",@"product-label"]];
-    LBProductImageTableRowController *row1 = [self.table rowControllerAtIndex:0];
-    
-    LBProductLabelTableRowController *row2 = [self.table rowControllerAtIndex:1];
-    
-    [row1.image loadImageWithURLString:@"http://imgs.xkcd.com/comics/dress_color.png" placeholder:nil];
-    
-    [row2.label setText:@"This dress looks awesome"];
-    
-    
-    
-    // Configure interface objects here.
 }
 
 - (void)willActivate {
@@ -45,6 +34,28 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+- (void)handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)remoteNotification{
+    NSDictionary * aps = [remoteNotification valueForKey:@"aps"];
+    NSDictionary * offer = [aps valueForKey:@"offer"];
+    NSString* imageUrl = [offer valueForKey:@"image-url"];
+    
+    NSString* productName = [offer valueForKey:@"product-name"];
+    NSString* productPrice = [offer valueForKey:@"product-price"];
+    
+    LBProductImageTableRowController *row1 = [self.table rowControllerAtIndex:0];
+    [row1.image loadImageWithURLString:imageUrl placeholder:nil];
+    
+    LBProductLabelTableRowController *row2 = [self.table rowControllerAtIndex:1];
+    
+    [row2.label setText:productName];
+    
+    [row2.price setText:[NSString stringWithFormat:@"$%@",productPrice]];
+}
+
+- (IBAction)buyButtonAction {
+    NSLog(@"Pressed the buy button");
 }
 
 @end
