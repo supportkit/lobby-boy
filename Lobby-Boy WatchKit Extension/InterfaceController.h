@@ -17,4 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet WKInterfaceButton* buyButton;
 
+@property NSNumber* currentItemPrice;
+
 @end
