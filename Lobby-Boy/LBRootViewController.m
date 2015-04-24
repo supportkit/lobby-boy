@@ -10,29 +10,16 @@
 #import <SupportKit/SupportKit.h>
 #import "AppDelegate.h"
 
-@interface LBRootViewController ()
-
-@end
-
 @implementation LBRootViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [SupportKit conversation].delegate = self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(IBAction)talkAction:(id)sender {
+-(IBAction)talkAction:(id)sender
+{
     [SupportKit showConversation];
 }
 
 -(void)conversation:(SKTConversation *)conversation didSelectBuyWithInfo:(SKTMessageBuyInfo*)buyInfo completion:(void (^)(BOOL))completion {
     
-    NSNumber* price = [NSNumber numberWithFloat:(buyInfo.price * 100.0)];
+    NSNumber* price = @(buyInfo.price * 100.0);
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/charge", kPaymentServerBaseUrl]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";

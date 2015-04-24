@@ -18,29 +18,7 @@
 
 @implementation LBUserInfoViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 -(IBAction)buttonTapped:(id)sender {
-    AppDelegate* app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    
     if(!self.firstNameField.hidden) {
         [SKTUser currentUser].firstName = self.firstNameField.text;
         [SKTUser currentUser].lastName = self.lastNameField.text;
@@ -64,18 +42,18 @@
         card.expYear = self.paymentView.card.expYear;
         card.cvc = self.paymentView.card.cvc;
         card.name = [NSString stringWithFormat:@"%@ %@", [SKTUser currentUser].firstName, [SKTUser currentUser].lastName];
-
+        
         [[STPAPIClient sharedClient] createTokenWithCard:card
                                               completion:^(STPToken *token, NSError *error) {
                                                   if (error) {
-                                                     [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                      [MBProgressHUD hideHUDForView:self.view animated:YES];
                                                       NSLog(@"%@", [error description]);
                                                   } else {
                                                       //Create customer on ed's backend
                                                       //save the customer token in user defaults
                                                       [self createCustomerTokenWithCardToken:token completion:^(NSString *customerToken, NSError *error) {
                                                           if(error) {
-                                                             [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                              [MBProgressHUD hideHUDForView:self.view animated:YES];
                                                               NSLog(@"%@", [error description]);
                                                           } else {
                                                               NSLog(@"Customer token: %@", customerToken);
@@ -85,12 +63,14 @@
                                                               //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:kSetupCompleteKey];
                                                               
                                                               [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                              
+                                                              AppDelegate* app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
                                                               [app showDefaultRoot];
                                                           }
                                                       }];
                                                   }
                                               }];
-
+        
     }
 }
 

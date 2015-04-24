@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <SupportKit/SupportKit.h>
 
-@interface LBRootViewController : UIViewController <SKTConversationDelegate>
+@interface LBRootViewController : UIViewController < SKTConversationDelegate >
 
 @property(nonatomic, strong) IBOutlet UIButton* talkButton;
 
 -(IBAction)talkAction:(id)sender;
+
 @end

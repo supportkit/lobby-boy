@@ -28,16 +28,15 @@ NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [Stripe setDefaultPublishableKey:kStripePublishableKey];
     
-    SKTSettings* sksettings = [SKTSettings settingsWithAppToken:kSupportKitAppToken];
-    sksettings.enableAppWideGesture = NO;
-    sksettings.enableGestureHintOnFirstLaunch = NO;
+    SKTSettings* skSettings = [SKTSettings settingsWithAppToken:kSupportKitAppToken];
+    skSettings.enableAppWideGesture = NO;
+    skSettings.enableGestureHintOnFirstLaunch = NO;
     
-    [SupportKit initWithSettings:sksettings];
+    [SupportKit initWithSettings:skSettings];
     
     //Show the onboarding controller if setup is not complete
     NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
