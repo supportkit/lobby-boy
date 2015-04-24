@@ -18,5 +18,8 @@
 @property(nonatomic, strong) IBOutlet UITextField* lastNameField;
 @property(nonatomic, strong) IBOutlet UITextField* emailField;
 
+@property(nonatomic, strong) IBOutlet UIButton* saveButton;
+
 -(IBAction)buttonTapped:(id)sender;
+-(IBAction)propertyFieldChanged:(id)sender;
 @end

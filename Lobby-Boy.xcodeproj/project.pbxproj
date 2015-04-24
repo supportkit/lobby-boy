@@ -15,11 +15,11 @@
 		F52557691AE94E92009D887D /* LBUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52557671AE94E92009D887D /* LBUserInfoViewController.m */; };
 		F525576A1AE94E92009D887D /* LBUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52557681AE94E92009D887D /* LBUserInfoViewController.xib */; };
 		F58D93831AE941F00079E843 /* lobbyboy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F58D93821AE941F00079E843 /* lobbyboy.jpg */; };
-		F58D93851AE944A90079E843 /* shark.png in Resources */ = {isa = PBXBuildFile; fileRef = F58D93841AE944A90079E843 /* shark.png */; };
 		F58D93921AE9451A0079E843 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D938F1AE9451A0079E843 /* OnboardingContentViewController.m */; };
 		F58D93931AE9451A0079E843 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D93911AE9451A0079E843 /* OnboardingViewController.m */; };
-		F58D93951AE949040079E843 /* bellboy_dribbble.png in Resources */ = {isa = PBXBuildFile; fileRef = F58D93941AE949040079E843 /* bellboy_dribbble.png */; };
 		F58D93971AE94A840079E843 /* salmon.png in Resources */ = {isa = PBXBuildFile; fileRef = F58D93961AE94A840079E843 /* salmon.png */; };
+		F5A36F481AE9858200A9F06C /* LBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A36F461AE9858200A9F06C /* LBRootViewController.m */; };
+		F5A36F491AE9858200A9F06C /* LBRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A36F471AE9858200A9F06C /* LBRootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +49,15 @@
 		F52557671AE94E92009D887D /* LBUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBUserInfoViewController.m; sourceTree = "<group>"; };
 		F52557681AE94E92009D887D /* LBUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBUserInfoViewController.xib; sourceTree = "<group>"; };
 		F58D93821AE941F00079E843 /* lobbyboy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lobbyboy.jpg; sourceTree = "<group>"; };
-		F58D93841AE944A90079E843 /* shark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shark.png; sourceTree = "<group>"; };
 		F58D938E1AE9451A0079E843 /* OnboardingContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingContentViewController.h; sourceTree = "<group>"; };
 		F58D938F1AE9451A0079E843 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
 		F58D93901AE9451A0079E843 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
 		F58D93911AE9451A0079E843 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
-		F58D93941AE949040079E843 /* bellboy_dribbble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bellboy_dribbble.png; sourceTree = "<group>"; };
 		F58D93961AE94A840079E843 /* salmon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salmon.png; sourceTree = "<group>"; };
+		F5A36F451AE9858200A9F06C /* LBRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBRootViewController.h; sourceTree = "<group>"; };
+		F5A36F461AE9858200A9F06C /* LBRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBRootViewController.m; sourceTree = "<group>"; };
+		F5A36F471AE9858200A9F06C /* LBRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBRootViewController.xib; sourceTree = "<group>"; };
+		F5A36F4A1AE98E7800A9F06C /* Arvil_Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arvil_Sans.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,9 @@
 				F52557661AE94E92009D887D /* LBUserInfoViewController.h */,
 				F52557671AE94E92009D887D /* LBUserInfoViewController.m */,
 				F52557681AE94E92009D887D /* LBUserInfoViewController.xib */,
+				F5A36F451AE9858200A9F06C /* LBRootViewController.h */,
+				F5A36F461AE9858200A9F06C /* LBRootViewController.m */,
+				F5A36F471AE9858200A9F06C /* LBRootViewController.xib */,
 			);
 			path = "Lobby-Boy";
 			sourceTree = "<group>";
@@ -159,10 +164,9 @@
 		F58D93811AE941F00079E843 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F5A36F4A1AE98E7800A9F06C /* Arvil_Sans.ttf */,
 				F58D93821AE941F00079E843 /* lobbyboy.jpg */,
 				F58D93961AE94A840079E843 /* salmon.png */,
-				F58D93941AE949040079E843 /* bellboy_dribbble.png */,
-				F58D93841AE944A90079E843 /* shark.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -260,8 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F58D93851AE944A90079E843 /* shark.png in Resources */,
-				F58D93951AE949040079E843 /* bellboy_dribbble.png in Resources */,
+				F5A36F491AE9858200A9F06C /* LBRootViewController.xib in Resources */,
 				F58D93831AE941F00079E843 /* lobbyboy.jpg in Resources */,
 				F50AB5901AE9415A00C3DB23 /* Images.xcassets in Resources */,
 				F58D93971AE94A840079E843 /* salmon.png in Resources */,
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A36F481AE9858200A9F06C /* LBRootViewController.m in Sources */,
 				F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */,
 				F52557691AE94E92009D887D /* LBUserInfoViewController.m in Sources */,
 				F50AB5851AE9415A00C3DB23 /* main.m in Sources */,

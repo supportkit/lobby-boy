@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+extern NSString * const kStripePublishableKey;
+extern NSString * const kSupportKitAppToken;
+extern NSString * const kSetupCompleteKey;
+extern NSString * const kPaymentServerBaseUrl;
+extern NSString * const kCustomerTokenKey;
 
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
 
-
+-(void)showDefaultRoot;
 @end
 

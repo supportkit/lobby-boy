@@ -10,6 +10,7 @@
                 <outlet property="firstNameField" destination="gFw-Sb-Ug8" id="Dgw-dQ-sve"/>
                 <outlet property="lastNameField" destination="dVI-Mx-9qd" id="Waf-qy-cRS"/>
                 <outlet property="paymentViewContainer" destination="qxj-dT-R0d" id="cFm-9A-qWB"/>
+                <outlet property="saveButton" destination="6pO-1X-td8" id="kbl-PS-wjZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,6 +38,9 @@
                             <include reference="7Up-ve-GQi"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="propertyFieldChanged:" destination="-1" eventType="editingChanged" id="DhV-2R-AaC"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVI-Mx-9qd">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -57,6 +61,9 @@
                             <include reference="Ida-Wi-84A"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="propertyFieldChanged:" destination="-1" eventType="editingChanged" id="w9B-s5-12A"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75Z-BJ-q51">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -80,6 +87,9 @@
                             <include reference="wfb-E7-MxX"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="propertyFieldChanged:" destination="-1" eventType="editingChanged" id="yCL-gI-3CM"/>
+                    </connections>
                 </textField>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxj-dT-R0d" userLabel="PaymentView" colorLabel="IBBuiltInLabel-Red">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -101,7 +111,7 @@
                         </mask>
                     </variation>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pO-1X-td8">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pO-1X-td8">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="Continue">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,11 +150,6 @@
                     <exclude reference="6pO-1X-td8"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="527-4u-udk"/>
-                    <exclude reference="5rd-BH-AbK"/>
-                    <exclude reference="UHR-D1-8wC"/>
-                    <exclude reference="Zph-rN-LP0"/>
-                    <exclude reference="zFY-ve-H6x"/>
                     <exclude reference="69B-ut-EeC"/>
                     <exclude reference="8b9-HK-7Q9"/>
                     <exclude reference="Oot-le-JgR"/>
@@ -153,8 +158,13 @@
                     <exclude reference="dTP-lo-JUa"/>
                     <exclude reference="rGA-1z-9uI"/>
                     <exclude reference="t7J-dj-Pbk"/>
+                    <exclude reference="527-4u-udk"/>
+                    <exclude reference="5rd-BH-AbK"/>
                     <exclude reference="UvY-Za-GWp"/>
                     <exclude reference="t6V-4v-p1d"/>
+                    <exclude reference="UHR-D1-8wC"/>
+                    <exclude reference="Zph-rN-LP0"/>
+                    <exclude reference="zFY-ve-H6x"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -166,11 +176,6 @@
                     <include reference="6pO-1X-td8"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="527-4u-udk"/>
-                    <include reference="5rd-BH-AbK"/>
-                    <include reference="UHR-D1-8wC"/>
-                    <include reference="Zph-rN-LP0"/>
-                    <include reference="zFY-ve-H6x"/>
                     <include reference="69B-ut-EeC"/>
                     <include reference="8b9-HK-7Q9"/>
                     <include reference="Oot-le-JgR"/>
@@ -179,8 +184,13 @@
                     <include reference="dTP-lo-JUa"/>
                     <include reference="rGA-1z-9uI"/>
                     <include reference="t7J-dj-Pbk"/>
+                    <include reference="527-4u-udk"/>
+                    <include reference="5rd-BH-AbK"/>
                     <include reference="UvY-Za-GWp"/>
                     <include reference="t6V-4v-p1d"/>
+                    <include reference="UHR-D1-8wC"/>
+                    <include reference="Zph-rN-LP0"/>
+                    <include reference="zFY-ve-H6x"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="413" y="360"/>
