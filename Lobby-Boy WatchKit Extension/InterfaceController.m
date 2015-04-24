@@ -37,7 +37,8 @@
 }
 
 - (void)handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)remoteNotification{
-    NSDictionary * offer = [remoteNotification valueForKey:@"offer"];
+    NSDictionary * aps = [remoteNotification valueForKey:@"aps"];
+    NSDictionary * offer = [aps valueForKey:@"offer"];
     NSString* imageUrl = [offer valueForKey:@"image-url"];
     
     NSString* productName = [offer valueForKey:@"product-name"];

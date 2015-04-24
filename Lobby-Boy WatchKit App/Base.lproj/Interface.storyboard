@@ -62,7 +62,7 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Found something for you" numberOfLines="2" id="IdU-wH-bcW"/>
+                        <label alignment="left" text="Found something for you" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
                         <color key="sashColor" red="0.57412749528884888" green="0.15489032864570618" blue="0.55934768915176392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
