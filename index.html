@@ -28,7 +28,7 @@
 		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
-		<title>Lobby Boy - Grant your customer's wishes</title>
+		<title>Lobby Boy - Grant wishes on demand, in your app</title>
 		<!-- Purecss framework -->
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -48,9 +48,13 @@
 		</script>
 
 		<script type="text/javascript">
-			$(document).ready(function() {
-				$(".fancybox").fancybox();
-			});
+			$('.fancybox-media').fancybox({
+					openEffect  : 'none',
+					closeEffect : 'none',
+					helpers : {
+						media : {}
+					}
+				});
 		</script>
 	</head>
 	<body>
@@ -61,7 +65,7 @@
 				<div class="image"></div>
 				<div class="content">
 				<h1><img src="images/lobby-hat.png" /><span class="nobr">LOBBY BOY</span></h1>
-				<h2>Grant your customer's wishes on demand over beautifully simple messaging.</h2>
+				<h2>Grant wishes on demand through beautifully simple in-app messaging.</h2>
 				<p></p>
 				<div class="buttonContainer"><a href="https://github.com/supportkit/lobby-boy" class="primaryButton"></a><a href="https://vimeo.com/126077065" class="fancybox fancybox-media button">&#9658; Play video</a></div>
 				</div>
@@ -79,7 +83,7 @@
 			<div class="feature">
 				<h2>Tap to Buy</h2>
 				<p>
-				Once you've identified a product or service your customer needs, you can set a price for it and offer it to your customer. These offers are displayed directly in the conversation and show up both in your app and on the user's Apple Watch. With a single tap, your users can buy the product or service you're offering and get back to their day.
+				Once you've identified a product or service your customer needs, you can set a price for it and offer it to your customer. These offers are displayed directly in the conversation and show up both in your app and on the user's Apple Watch. Lobby Boy integrates with Stripe so that with a single tap, your users can buy the product or service you're offering and get back to their day.
 				</p>
 			</div>
 			<div class="feature">
@@ -88,6 +92,12 @@
 				Speak to your customers using Slack, E-Mail or your favourite CRM. SupportKit's versatile in-app messaging platform allows you to manage communication, effortlessly. 
 				</p>
 			</div>
+			<div class="feature">
+				<h2>Open source, so you can build</h2>
+				<p>
+				Visit our Github repository to learn more about how Lobby Boy works so that you can start building on-demand, conversational commerce features into your own app. 
+				</p>
+			</div>			
 		</div>
 		<div class="team">
 			<h2><a href="http://supportkit.io">Made with &hearts; by SupportKit</a></h2>
