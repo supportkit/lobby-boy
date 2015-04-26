@@ -134,16 +134,17 @@
         }
     }else if ([value isEqualToString:@"buy"]){
         NSNumber *price = userInfo[@"price"];
+        NSLog(@"chaging from watch");
         [LBStripeCharger change:price withCompletionHandler:^(NSURLResponse *response,
                                                              NSData *data,
                                                              NSError *error) {
             
             if (error) {
-                NSLog(@"Charged from the watch");
-                reply(@{@"error":@YES});
-            } else {
                 NSLog(@"Failled to charge from the watch");
-                reply(@{@"error":@NO});
+                reply(@{@"message":@"error"});
+            } else {
+                NSLog(@"Charged from the watch");
+                reply(@{@"message":@"success"});
             }
         }];
     }

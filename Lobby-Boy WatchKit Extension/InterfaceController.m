@@ -34,6 +34,7 @@
     
     [row2.price setText:@""];
     [self.buyButton setHidden:YES];
+    [row2.price setHidden:NO];
 }
 
 - (void)willActivate {
@@ -77,8 +78,9 @@
     
     [WKInterfaceController openParentApplication:@{@"key":@"buy", @"price":self.currentItemPrice} reply:^(NSDictionary *replyInfo, NSError *error) {
         LBProductLabelTableRowController *row2 = [self.table rowControllerAtIndex:1];
-        NSNumber *hadError = replyInfo[@"error"];
-        if (hadError) {
+        [row2.price setHidden:YES];
+        NSString* message = replyInfo[@"message"];
+        if ([message isEqualToString:@"error"]) {
             [row2.label setText:@"Error happended!"];
         }else{
             [row2.label setText:@"Purchased"];
