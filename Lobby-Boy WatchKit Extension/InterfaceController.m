@@ -24,6 +24,16 @@
     [super awakeWithContext:context];
     
     [self.table setRowTypes:@[@"product-image",@"product-label"]];
+    
+    LBProductImageTableRowController *row1 = [self.table rowControllerAtIndex:0];
+    [row1.image setImage:[UIImage imageNamed:@"hat"]];
+    
+    LBProductLabelTableRowController *row2 = [self.table rowControllerAtIndex:1];
+    
+    [row2.label setText:@"Messages from Lobby Boy will show up here"];
+    
+    [row2.price setText:@""];
+    [self.buyButton setHidden:YES];
 }
 
 - (void)willActivate {
@@ -56,10 +66,14 @@
     f.numberStyle = NSNumberFormatterDecimalStyle;
     
     self.currentItemPrice = [f numberFromString:productPrice];
+    [self.buyButton setHidden:NO];
+    [self.buyButton setEnabled:YES];
 }
 
 - (IBAction)buyButtonAction {
     NSLog(@"Pressed the buy button");
+    
+    [self.buyButton setEnabled:NO];
     
     [WKInterfaceController openParentApplication:@{@"key":@"buy", @"price":self.currentItemPrice} reply:^(NSDictionary *replyInfo, NSError *error) {
         LBProductLabelTableRowController *row2 = [self.table rowControllerAtIndex:1];

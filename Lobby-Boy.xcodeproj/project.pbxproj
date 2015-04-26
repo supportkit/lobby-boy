@@ -55,6 +55,10 @@
 		9FEF55E91AEAD8C100C08BBF /* LBStripeCharger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */; };
 		9FEF55EA1AEAD8C100C08BBF /* LBStripeCharger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */; };
 		9FEF55EB1AEAD8C100C08BBF /* LBStripeCharger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */; };
+		9FEF55ED1AEAE8F000C08BBF /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEF55EC1AEAE8F000C08BBF /* hat.png */; };
+		9FEF55EE1AEAE8F000C08BBF /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEF55EC1AEAE8F000C08BBF /* hat.png */; };
+		9FEF55EF1AEAE8F000C08BBF /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEF55EC1AEAE8F000C08BBF /* hat.png */; };
+		9FEF55F01AEAE8F000C08BBF /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEF55EC1AEAE8F000C08BBF /* hat.png */; };
 		C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72865DC11A6E56110BA11C52 /* libPods.a */; };
 		F50AB5851AE9415A00C3DB23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5841AE9415A00C3DB23 /* main.m */; };
 		F50AB5881AE9415A00C3DB23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AB5871AE9415A00C3DB23 /* AppDelegate.m */; };
@@ -158,6 +162,7 @@
 		9FDF25631AE9A83E00F2748E /* LBProductLabelTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBProductLabelTableRowController.m; sourceTree = "<group>"; };
 		9FEF55E71AEAD8C000C08BBF /* LBStripeCharger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBStripeCharger.h; sourceTree = "<group>"; };
 		9FEF55E81AEAD8C000C08BBF /* LBStripeCharger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBStripeCharger.m; sourceTree = "<group>"; };
+		9FEF55EC1AEAE8F000C08BBF /* hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hat.png; sourceTree = "<group>"; };
 		B715EEF2381B7720365C4CB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F50AB57F1AE9415900C3DB23 /* Lobby-Boy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lobby-Boy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50AB5831AE9415A00C3DB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -234,6 +239,7 @@
 		9F301B4A1AE9707300324DA4 /* Lobby-Boy WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9FEF55EC1AEAE8F000C08BBF /* hat.png */,
 				9F301BB01AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.h */,
 				9F301BB11AE9989F00324DA4 /* WKInterfaceImage+ParentLoad.m */,
 				9F301B4E1AE9707300324DA4 /* InterfaceController.h */,
@@ -530,6 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEF55EF1AEAE8F000C08BBF /* hat.png in Resources */,
 				9F301B591AE9707300324DA4 /* Lobby-Boy WatchKit App.app in Resources */,
 				9F301B551AE9707300324DA4 /* Images.xcassets in Resources */,
 			);
@@ -539,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEF55F01AEAE8F000C08BBF /* hat.png in Resources */,
 				9F301B611AE9707300324DA4 /* Interface.storyboard in Resources */,
 				9F301B631AE9707300324DA4 /* Images.xcassets in Resources */,
 			);
@@ -573,6 +581,7 @@
 				F525576A1AE94E92009D887D /* LBUserInfoViewController.xib in Resources */,
 				277F8C761AEADF100010D2AA /* Icon-60@2x.png in Resources */,
 				277F8C791AEADF100010D2AA /* Icon-72@2x.png in Resources */,
+				9FEF55ED1AEAE8F000C08BBF /* hat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +589,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEF55EE1AEAE8F000C08BBF /* hat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
