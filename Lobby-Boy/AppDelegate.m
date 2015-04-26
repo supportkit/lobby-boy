@@ -39,7 +39,7 @@
     NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
     if(![def boolForKey:kSetupCompleteKey]) {
         OnboardingContentViewController* firstPage = [OnboardingContentViewController contentWithTitle:@"Nice to meet you!"
-                                                                                                  body:@"Grant your customers' wishes on demand over beautifully simple messaging."
+                                                                                                  body:@"Lobby Boy grants your wishes over beautifully simple messaging."
                                                                                                  image:[UIImage imageNamed:@"lobby-logo-1"] buttonText:nil action:nil];
         firstPage.topPadding = 100;
         firstPage.underIconPadding = 195;
