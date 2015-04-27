@@ -24,6 +24,7 @@ body{
 	left:0;
 	padding:24px 24px;
 	z-index:1;
+	display:none;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -42,6 +43,7 @@ body{
 	left:0;
 	padding:34px 34px;
 	z-index:1;
+	display:none;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
