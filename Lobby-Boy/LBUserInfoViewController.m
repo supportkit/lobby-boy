@@ -30,6 +30,7 @@
         self.firstNameField.hidden = YES;
         self.lastNameField.hidden = YES;
         self.emailField.hidden = YES;
+        self.ccInfoLabel.hidden = NO;
         
         self.paymentView = [[PTKView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-290)/2, self.firstNameField.frame.origin.y, 290, 55)];
         self.paymentView.delegate = self;
