@@ -78,6 +78,27 @@
 
     [self.window makeKeyAndVisible];
     
+    
+    UIMutableUserNotificationAction *notificationAction1 = [[UIMutableUserNotificationAction alloc] init];
+    notificationAction1.identifier = @"firstButtonAction";
+    notificationAction1.title = @"Show me";
+    notificationAction1.activationMode = UIUserNotificationActivationModeForeground;
+    notificationAction1.authenticationRequired = NO;
+
+    
+    UIMutableUserNotificationCategory *notificationCategory = [[UIMutableUserNotificationCategory alloc] init];
+    notificationCategory.identifier = @"myCategory";
+    [notificationCategory setActions:@[notificationAction1] forContext:UIUserNotificationActionContextDefault];
+    [notificationCategory setActions:@[notificationAction1] forContext:UIUserNotificationActionContextMinimal];
+    
+    NSSet *categories = [NSSet setWithObjects:notificationCategory, nil];
+    
+    UIUserNotificationType notificationType = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:notificationType categories:categories];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+    
+    
     return YES;
 }
 
