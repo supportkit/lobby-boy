@@ -20,3 +20,9 @@ If you want to configure Lobby Boy for your own uses, it only takes a few minute
 
 You're ready to go! We'd love to hear your feedback, reach us [@supportkit](http://twitter.com/supportkit) or hello@supportkit.io
 
+## Offering a product or service
+
+Offering a product or service to your users is easy, just use the `!offer` command in Slack and your offer will appear in the user's conversation with the option to buy or view more info.
+
+1. Configure a [Slack integration](http://docs.supportkit.io/#slack) for your SupportKit app.
+2. When speaking to one of your users, use the `/sk !offer` command with the following syntax: `/sk !offer [price] [image-url] [product-info-url] [product name]` For example: `!offer 129.99 http://www.selectism.com/files/2014/03/budapest-nose-2014-01-630x420.jpg http://google.com Air de Panache`
