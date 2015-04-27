@@ -24,7 +24,6 @@ body{
 	left:0;
 	padding:24px 24px;
 	z-index:1;
-	display:none;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -43,7 +42,6 @@ body{
 	left:0;
 	padding:34px 34px;
 	z-index:1;
-	display:none;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -69,9 +67,9 @@ body{
 	width:50%;
 	text-align:center;
 	padding-right:10%;
-	position:relative;
-	z-index:2;
-	padding-top:320px;*/
+	position:relative;*/
+	z-index:3;
+	/*padding-top:320px;*/
 	position: absolute;
   width: 50%;
   right: 0;
