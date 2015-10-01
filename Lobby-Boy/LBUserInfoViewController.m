@@ -50,51 +50,17 @@
                                                       [MBProgressHUD hideHUDForView:self.view animated:YES];
                                                       NSLog(@"%@", [error description]);
                                                   } else {
-                                                      //Create customer on ed's backend
-                                                      //save the customer token in user defaults
-                                                      [self createCustomerTokenWithCardToken:token completion:^(NSString *customerToken, NSError *error) {
-                                                          if(error) {
-                                                              [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                                              NSLog(@"%@", [error description]);
-                                                          } else {
-                                                              NSLog(@"Customer token: %@", customerToken);
-                                                              
-                                                              [SupportKit track:@"Account Setup Complete"];
-                                                              [[NSUserDefaults standardUserDefaults] setObject:customerToken forKey:kCustomerTokenKey];
-                                                              [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kSetupCompleteKey];
-                                                              
-                                                              [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                                              
-                                                              AppDelegate* app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-                                                              [app showDefaultRoot];
-                                                          }
-                                                      }];
+                                                      //Upload customer token to SK backend
+                                                      [SKTUser currentUser].stripeToken = token.tokenId;
+                                                      
+                                                      [SupportKit track:@"Account Setup Complete"];
+                                                      [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                      
+                                                      AppDelegate* app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+                                                      [app showDefaultRoot];
                                                   }
                                               }];
     }
-}
-
-
--(void)createCustomerTokenWithCardToken:(STPToken*)token completion:(void (^)(NSString* customerToken, NSError* error))completion {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/user", kPaymentServerBaseUrl]];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&email=%@&name=%@", token.tokenId, [SKTUser currentUser].email, token.card.name];
-    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
-    
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response,
-                                               NSData *data,
-                                               NSError *error) {
-                               if (error) {
-                                   completion(nil, error);
-                               } else {
-                                   completion([[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding], nil);
-                               }
-                           }];
 }
 
 -(IBAction)propertyFieldChanged:(id)sender {

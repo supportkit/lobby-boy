@@ -1,7 +1,7 @@
 //
 //  SupportKit.h
 //  SupportKit
-//  version : 2.7.1337
+//  version : <%= version %>
 //
 //  Copyright (c) 2015 Radialpoint. All rights reserved.
 //
@@ -11,7 +11,7 @@
 #import "SKTSettings.h"
 #import "SKTUser.h"
 
-#define SUPPORTKIT_VERSION @"2.7.1337"
+#define SUPPORTKIT_VERSION @"<%= version %>"
 
 @interface SupportKit : NSObject
 
@@ -67,6 +67,15 @@
  *  +initWithSettings: must have been called prior to calling +showConversationFromViewController:.
  */
 +(void)showConversationFromViewController:(UIViewController*)viewController;
+
+/**
+ *  @abstract Creates and returns a SupportKit conversation view controller.
+ *
+ *  @discussion You may use this view controller to embed the conversation in a navigation controller, to change the modal presentation style, or display it in any way you choose.
+ *
+ *  @return A new instance of the SupportKit conversation view controller class.
+ */
++(UIViewController*)newConversationViewController;
 
 /**
  *  @abstract Displays the SupportKit gesture hint.
@@ -135,5 +144,30 @@
  *  @return Current conversation, or nil if +initWithSettings: hasn't been called yet.
  */
 +(SKTConversation*)conversation;
+
+/**
+ *  @abstract Logs in a new SupportKit user.
+ *
+ *  @discussion You can either use this method to transition from logged out state to logged in, or to switch the currently logged in user to a different one.
+ *
+ *  +initWithSettings: must have been called prior to calling login.
+ *
+*  You may not call login while the conversation screen is shown. Doing so will result in a no-op.
+ *
+ *  @param userId The distinct id of the user to login. Must not be nil.
+ *  @param jwt Optional jwt used to prove the origin of the login request. May be nil.
+ */
++(void)login:(NSString*)userId jwt:(NSString*)jwt;
+
+/**
+ *  @abstract Logs out the current user.
+ *
+ *  @discussion This method will automatically login an anonymous user after logging out the current user.
+ *
+ *  Calling this method while already in anonymous state has no effect.
+ *
+ *  You may not call logout while the conversation screen is shown. Doing so will result in a no-op.
+ */
++(void)logout;
 
 @end

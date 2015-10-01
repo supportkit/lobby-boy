@@ -51,4 +51,9 @@
  */
 @property(copy) NSDate* signedUpAt;
 
+/**
+ *  @abstract The token returned return by Stripe after calling `createTokenWithCard:` see https://stripe.com/docs/mobile/ios#stpcard-token
+ */
+@property(copy) NSString* stripeToken;
+
 @end
