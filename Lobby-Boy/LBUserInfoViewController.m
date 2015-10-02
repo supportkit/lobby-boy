@@ -42,22 +42,38 @@
         card.expMonth = self.paymentView.card.expMonth;
         card.expYear = self.paymentView.card.expYear;
         card.cvc = self.paymentView.card.cvc;
-        card.name = [NSString stringWithFormat:@"%@ %@", [SKTUser currentUser].firstName, [SKTUser currentUser].lastName];
+        //card.name = [NSString stringWithFormat:@"%@ %@", [SKTUser currentUser].firstName, [SKTUser currentUser].lastName];
         
         [[STPAPIClient sharedClient] createTokenWithCard:card
                                               completion:^(STPToken *token, NSError *error) {
+                                                  NSLog(@"token %@",token);
                                                   if (error) {
                                                       [MBProgressHUD hideHUDForView:self.view animated:YES];
                                                       NSLog(@"%@", [error description]);
                                                   } else {
                                                       //Upload customer token to SK backend
-                                                      [[SKTUser currentUser] setStripeToken:token.tokenId completion:nil];
+                                                      [[SKTUser currentUser] setStripeToken:token.tokenId completion:^(NSError *error) {
+                                                          
+                                                          if (error) {
+                                                              NSLog(@"%@",error);
+                                                              NSString* text = @"could not create customer";
+                                                              UIAlertView* av = [[UIAlertView alloc] initWithTitle:text
+                                                                                                           message:text
+                                                                                                          delegate:nil
+                                                                                                 cancelButtonTitle:@"Okay"
+                                                                                                 otherButtonTitles:nil];
+                                                              [av show];
+                                                              
+                                                          }else{
+                                                              [SupportKit track:@"Account Setup Complete"];
+                                                              [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                              
+                                                              AppDelegate* app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+                                                              [app showDefaultRoot];
+                                                          }
+                                                      }];
                                                       
-                                                      [SupportKit track:@"Account Setup Complete"];
-                                                      [MBProgressHUD hideHUDForView:self.view animated:YES];
                                                       
-                                                      AppDelegate* app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-                                                      [app showDefaultRoot];
                                                   }
                                               }];
     }

@@ -9,8 +9,8 @@
 #import "LBStripeCharger.h"
 
 NSString * const kPaymentServerBaseUrl = @"https://supportkit-staging.herokuapp.com";
-NSString * const kStripePublishableKey = @"pk_test_XMVpxPrQVvXdN8x98LKZ1m8y";
-NSString * const kSupportKitAppToken = @"7l7ldpc0cyir8jgqw7eimped4";
+NSString * const kStripePublishableKey = @"pk_test_hYK9Bt5xc56yA9nX36mCBBSP";
+NSString * const kSupportKitAppToken = @"5wyi84fxf0h9sz487t079z9zq";
 NSString * const kSetupCompleteKey = @"setupComplete";
 NSString * const kCustomerTokenKey = @"kCustomerTokenKey";
 
