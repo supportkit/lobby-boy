@@ -12,6 +12,7 @@
 
 typedef void (^SKTImageUploadProgressBlock)(double progress);
 typedef void (^SKTImageUploadCompletionBlock)(NSError *error, SKTMessage *message);
+typedef void (^SKTCreditCardEntryCompletionBlock)(NSError *error);
 
 /**
  *  @discussion Represents various actions the user takes when interacting with SupportKit UI components.
@@ -216,5 +217,16 @@ extern NSString* const SKTConversationNewMessagesKey;
  *  @see SKTMessage
  */
 -(void)conversation:(SKTConversation*)conversation didReceiveMessages:(NSArray*)messages;
+
+/**
+ *  @abstract Notifies the delegate that a credit card was requested.
+ *
+ *  @discussion Called when the user tried to buy an item but doesn't have billing into set. You should present a credit card capture form, call stripe API, call setStripeToken before calling the completion
+ *
+ *  @param conversation The conversation object.
+ *  @param completion block to call once the billing info has been set for the current user.
+ *
+ */
+-(void)conversation:(SKTConversation*)conversation didRequestCreditCardWithCompletion:(SKTCreditCardEntryCompletionBlock)completion;
 
 @end

@@ -51,7 +51,7 @@
                                                       NSLog(@"%@", [error description]);
                                                   } else {
                                                       //Upload customer token to SK backend
-                                                      [SKTUser currentUser].stripeToken = token.tokenId;
+                                                      [[SKTUser currentUser] setStripeToken:token.tokenId completion:nil];
                                                       
                                                       [SupportKit track:@"Account Setup Complete"];
                                                       [MBProgressHUD hideHUDForView:self.view animated:YES];

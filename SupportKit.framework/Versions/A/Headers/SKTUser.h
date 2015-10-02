@@ -7,6 +7,14 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  A callback to be run with the response from sending the stripeToken to SupportKit server
+ *
+ *  @param error The error returned from the response, or nil in one occurs.
+ */
+typedef void (^SKTStripeTokenUploadCompletionBlock)(NSError *error);
+typedef void (^SKTBuyCompletionBlock)(NSError *error);
+
 @interface SKTUser : NSObject
 
 /**
@@ -52,8 +60,15 @@
 @property(copy) NSDate* signedUpAt;
 
 /**
- *  @abstract The token returned return by Stripe after calling `createTokenWithCard:` see https://stripe.com/docs/mobile/ios#stpcard-token
+ *  @abstract send the token returned return by Stripe after calling `createTokenWithCard:` see https://stripe.com/docs/mobile/ios#stpcard-token
  */
-@property(copy) NSString* stripeToken;
+-(void)setStripeToken:(NSString*)token completion:(SKTStripeTokenUploadCompletionBlock)completion;
+
+/**
+ *  @abstract if SupportKit has billing info for this user
+ */
+-(BOOL)hasBillingInfo;
+
+-(void)buy:(NSString*)sku completion:(SKTBuyCompletionBlock)completion;
 
 @end

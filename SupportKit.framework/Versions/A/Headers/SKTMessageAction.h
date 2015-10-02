@@ -14,6 +14,13 @@
  *
  *  @see SKTMessage
  */
+
+
+typedef enum
+{
+    SKTMessageActionTypeBuy
+} SKTMessageActionType;
+
 @interface SKTMessageAction : NSObject
 
 /**
@@ -25,5 +32,15 @@
  *  @abstract The URI to navigate to if the user interacts with the action.
  */
 @property(readonly) NSURL* uri;
+
+/**
+ *  @abstract The type of button.
+ */
+@property(readonly) SKTMessageActionType type;
+
+/**
+ *  @abstract The URI to navigate to if the user interacts with the action.
+ */
+@property(readonly) NSString* sku;
 
 @end

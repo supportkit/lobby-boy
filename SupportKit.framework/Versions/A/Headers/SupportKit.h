@@ -13,6 +13,8 @@
 
 #define SUPPORTKIT_VERSION @"<%= version %>"
 
+extern NSString* const SKTInitializationCompletedNotification;
+
 @interface SupportKit : NSObject
 
 /**

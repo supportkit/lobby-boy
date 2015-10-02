@@ -34,8 +34,8 @@
 		277F8C901AEAE32B0010D2AA /* lobby-boy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 277F8C8D1AEAE32B0010D2AA /* lobby-boy@2x.png */; };
 		277F8C911AEAE32B0010D2AA /* lobby-logo-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 277F8C8E1AEAE32B0010D2AA /* lobby-logo-1@2x.png */; };
 		277F8C921AEAE32B0010D2AA /* register@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 277F8C8F1AEAE32B0010D2AA /* register@2x.png */; };
-		888330181BBDB16800DE3E0B /* SupportKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 888330161BBDB16800DE3E0B /* SupportKit.bundle */; settings = {ASSET_TAGS = (); }; };
-		888330191BBDB16800DE3E0B /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888330171BBDB16800DE3E0B /* SupportKit.framework */; settings = {ASSET_TAGS = (); }; };
+		8883301E1BBEFC0D00DE3E0B /* SupportKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8883301C1BBEFC0D00DE3E0B /* SupportKit.bundle */; settings = {ASSET_TAGS = (); }; };
+		8883301F1BBEFC0D00DE3E0B /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8883301D1BBEFC0D00DE3E0B /* SupportKit.framework */; settings = {ASSET_TAGS = (); }; };
 		9F301B501AE9707300324DA4 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301B4F1AE9707300324DA4 /* InterfaceController.m */; };
 		9F301B531AE9707300324DA4 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F301B521AE9707300324DA4 /* NotificationController.m */; };
 		9F301B551AE9707300324DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F301B541AE9707300324DA4 /* Images.xcassets */; };
@@ -140,8 +140,8 @@
 		277F8C8E1AEAE32B0010D2AA /* lobby-logo-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lobby-logo-1@2x.png"; sourceTree = "<group>"; };
 		277F8C8F1AEAE32B0010D2AA /* register@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register@2x.png"; sourceTree = "<group>"; };
 		72865DC11A6E56110BA11C52 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		888330161BBDB16800DE3E0B /* SupportKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SupportKit.bundle; sourceTree = "<group>"; };
-		888330171BBDB16800DE3E0B /* SupportKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportKit.framework; sourceTree = "<group>"; };
+		8883301C1BBEFC0D00DE3E0B /* SupportKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SupportKit.bundle; sourceTree = "<group>"; };
+		8883301D1BBEFC0D00DE3E0B /* SupportKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportKit.framework; sourceTree = "<group>"; };
 		9F301B491AE9707300324DA4 /* Lobby-Boy WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Lobby-Boy WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F301B4C1AE9707300324DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F301B4D1AE9707300324DA4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 				275FDDBC1AEA7C7F00F964D4 /* CoreText.framework in Frameworks */,
 				275FDDBA1AEA7C7B00F964D4 /* CoreTelephony.framework in Frameworks */,
 				275FDDB81AEA7C7700F964D4 /* CoreGraphics.framework in Frameworks */,
-				888330191BBDB16800DE3E0B /* SupportKit.framework in Frameworks */,
+				8883301F1BBEFC0D00DE3E0B /* SupportKit.framework in Frameworks */,
 				275FDDB61AEA7C5900F964D4 /* libxml2.dylib in Frameworks */,
 				C6FA88353946C11E307A9A09 /* libPods.a in Frameworks */,
 			);
@@ -223,8 +223,8 @@
 		34E743C0C7B42B7C8AC63817 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				888330161BBDB16800DE3E0B /* SupportKit.bundle */,
-				888330171BBDB16800DE3E0B /* SupportKit.framework */,
+				8883301C1BBEFC0D00DE3E0B /* SupportKit.bundle */,
+				8883301D1BBEFC0D00DE3E0B /* SupportKit.framework */,
 				275FDDBF1AEA7C9300F964D4 /* SystemConfiguration.framework */,
 				275FDDBD1AEA7C8800F964D4 /* OpenGLES.framework */,
 				275FDDBB1AEA7C7F00F964D4 /* CoreText.framework */,
@@ -570,7 +570,7 @@
 				277F8C901AEAE32B0010D2AA /* lobby-boy@2x.png in Resources */,
 				277F8C811AEADF100010D2AA /* Icon-Small.png in Resources */,
 				277F8C7A1AEADF100010D2AA /* Icon-76.png in Resources */,
-				888330181BBDB16800DE3E0B /* SupportKit.bundle in Resources */,
+				8883301E1BBEFC0D00DE3E0B /* SupportKit.bundle in Resources */,
 				277F8C831AEADF100010D2AA /* Icon-Small@3x.png in Resources */,
 				277F8C821AEADF100010D2AA /* Icon-Small@2x.png in Resources */,
 				277F8C7F1AEADF100010D2AA /* Icon-Small-50.png in Resources */,
